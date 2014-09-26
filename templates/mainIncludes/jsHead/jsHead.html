@@ -1,0 +1,34 @@
+<venda_tpcomment><!-- Typekit standard embed code --></venda_tpcomment>
+<script type="text/javascript" src="//use.typekit.net/bis4gaq.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<venda_tpcomment><!-- Optimizely embed code --></venda_tpcomment>
+<script src="//cdn.optimizely.com/js/1199170409.js"></script>
+
+<venda_tpcomment><!-- modernizr: foundation uses this for 'hide-on' 'show-on' device detection classes. can be customised as per requirements at http://modernizr.com/download/ --></venda_tpcomment>
+<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/external/modernizr.js?v=1"></script>
+<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/external/util-0.0.1.js"></script>
+<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/external/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/external/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/Venda.js"></script>
+<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/external/jquery.mobile.custom.js"></script>
+<venda_tpcomment><!-- attributes.js --></venda_tpcomment>
+<venda_block label=1,mode=value,<venda_tpxt mode=get,name=activekeyword>=notnull>
+	<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/Venda/Attributes/attributes.js"></script>
+</venda_block label=1>
+<venda_block label=2,rtype=invt,rtype=notnull,workflow=quickshop,operator=or>
+    <script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/Venda/Attributes/attributes.js"></script>
+</venda_block label=2>
+
+<venda_tpcomment><!-- countrySelect.js and Tracking.js --></venda_tpcomment>
+<venda_block label=3,workflow=checkout,workflow=register,workflow=myaccount,workflow=addresslookup,workflow=shopcart,workflow=instore,operator=or>
+	<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/Venda/Widget/countrySelect-new.js"></script>
+	<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/Venda/Widget/AddressLookup.js"></script>
+	<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/Venda/Widget/Tracking.js"></script>
+</venda_block label=3>
+<venda_block label=4,mode=value,<venda_tpxt mode=get,name=trackingstep>=myaccount/user-myform>
+	<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/Venda/Widget/countrySelect.js"></script>
+	<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/Venda/Widget/Tracking.js"></script>
+	<script type="text/javascript" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/Venda/Widget/AddressLookup.js"></script>
+</venda_block label=4>
+<!--[if lte IE 7]><script src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/icon-lte-ie7.js"></script><![endif]-->

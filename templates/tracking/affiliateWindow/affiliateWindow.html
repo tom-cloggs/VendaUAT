@@ -1,0 +1,27 @@
+
+<!-- Image Pixel Tracking - Mandatory --> 
+<img src="https://www.awin1.com/sread.img?tt=ns&tv=2&merchant=5882&amount=<venda_ohtot>&cr=GBP&ref=<venda_ohordnum>&parts=DEFAULT:<venda_ohtot>&vc=<venda_codesc>
+&ch=aw&testmode=0" border="0" width="0" height="0">
+ 
+<!-- Product Level Tracking - Optional -- > 
+
+<!-- Javascript Tracking - Mandatory --> 
+<script type="text/javascript">
+ //<![CDATA[
+    /*** Do not change ***/
+    var AWIN = {};
+    AWIN.Tracking = {};
+    AWIN.Tracking.Sale = {};
+ 
+    /*** Set your transaction parameters ***/
+    AWIN.Tracking.Sale.amount = '<venda_ohtot>';
+    AWIN.Tracking.Sale.orderRef = '<venda_ohordnum>';
+    AWIN.Tracking.Sale.parts = 'DEFAULT:<venda_ohtot>';
+    AWIN.Tracking.Sale.voucher = '<venda_codesc>';
+    AWIN.Tracking.Sale.currency = 'GBP';
+    AWIN.Tracking.Sale.test = '0';
+    AWIN.Tracking.Sale.channel = 'aw';
+ //]]>
+</script>
+ 
+<script src="https://www.dwin1.com/5882.js" type="text/javascript" defer="defer"></script>

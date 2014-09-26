@@ -1,0 +1,24 @@
+<venda_detblock>
+<venda_order ref=<venda_ohrfnbr>,shopcart=0,template=myaccountRecentOrdersDetail>
+</venda_detblock>
+
+<venda_block cartcount!=0>
+<table>
+      <thead>
+        <tr>
+          <th width="210"><venda_text id=desktop.info.order_number></th>
+          <th width="510">Items</th>
+          <th width="200"><venda_text id=desktop.info.order_status></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+			<venda_detail>
+        </tr>
+      </tbody>
+</table>
+</venda_block>
+
+<venda_block cartcount=0>
+<p>No recent orders</p>
+</venda_block>

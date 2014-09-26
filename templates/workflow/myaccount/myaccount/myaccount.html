@@ -1,0 +1,164 @@
+  <venda_block label=33,ustype!=R>
+      <script language="javascript" type="text/javascript">  <venda_tpcomment>/* forward to log in page*/</venda_tpcomment>  window.location.replace="<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref>";  </script>
+          <div class="main-header"><h1><venda_text id=desktop.heading.myaccount></h1></div>
+          <div class="thickpad">
+            <p><venda_text id=desktop.info.myaccount_login_message> <a href="<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref>"><venda_text id=desktop.button.log_in></a></p>
+          </div>
+  </venda_block label=33>
+  <venda_block label=31,ustype=R>
+
+  <div class="main-header"><h1><venda_text id=desktop.heading.myaccount></h1></div>
+      <div>
+          <venda_userinfo><p class="panel"><venda_text id=desktop.info.myaccount_welcome></p></venda_userinfo>
+
+          <div class="box">
+              <div class="box-header"><h3><venda_text id=desktop.heading.recent_orders></h3></div>
+              <div class="box-body">
+			  <div class="table-overflow">
+                     <venda_cartlist carttype=order,template=myaccountRecentOrders,type=order,limit=1>
+			</div>
+                     <a href="<venda_codehttps>?ex=co_wizr-myaccount&bsref=<venda_bsref>&step=orderhistory" class="button"><venda_text id=desktop.button.view_order_history></a>
+              </div>
+          </div>
+
+          <div class="box">
+              <div class="box-header"><h3><venda_text id=desktop.heading.billing_details></h3></div>
+              <div class="box-body">
+                  <div class="panel">
+                  <venda_userinfo>
+                    <p>
+                      <strong><venda_sestitle> <venda_sesfname> <venda_seslname></strong><br>
+                      <venda_block label=1000,mode=value,<venda_setting type=ebiz,name=showcompany>=1>
+                        <venda_block label=1001,sescompany=notnull><venda_sescompany></venda_block label=1001>
+                      </venda_block label=1000>
+                      <venda_sesnum> <venda_sesaddr1><br>
+                      <venda_block sesaddr2=notnull><venda_sesaddr2><br></venda_block>
+
+                      <venda_tpcomment><!-- if country is US or US entities display this formatting --></venda_tpcomment>
+                      <venda_block label=999,mode=value,<venda_sescntry>=United States,<venda_sescntry>=United States Non-48,<venda_sescntry>=United States Armed Forces,operator=or>
+                      <venda_sescity>, <venda_sesstate> <venda_seszipc><br>
+                      </venda_block label=999>
+
+                      <!-- if country is NOT US or US entities display this formatting --></venda_tpcomment>
+                      <venda_block label=9991,mode=value,<venda_sescntry>!=United States,<venda_sescntry>!=United States Non-48,<venda_sescntry>!=United States Armed Forces,operator=and>
+                      <venda_sescity><br>
+                      <venda_block label=751,sesstate=notnull,seszipc=notnull,operator=or><venda_sesstate> <venda_seszipc><br></venda_block label=751>
+                      </venda_block label=9991>
+
+                      <venda_sescntry><br>
+                      <venda_block label=12,sesphone=notnull><venda_sesphone></venda_block label=12>
+                    </p>
+                  </venda_userinfo>  
+                  </div>
+                  <a href="<venda_codehttps>?ex=tl_user-myform&bsref=<venda_bsref>&layout=myaccount&htxt=<venda_htxt mode=make,addr=change>" class="button"><venda_text id=desktop.button.edit_billing_details></a>
+              </div>
+          </div>
+
+          <div class="box">
+              <div class="box-header"><h3><venda_text id=desktop.heading.account_details></h3></div>
+              <div class="box-body">
+                   <a href="<venda_codehttps>?ex=tl_user-myform&bsref=<venda_bsref>&layout=myaccount&htxt=<venda_htxt mode=make,pass=change>" class="button marg-bottom"><venda_text id=desktop.button.edit_email_password></a>
+                  <a href="<venda_codehttps>?ex=tl_user-myform&bsref=<venda_bsref>&layout=myaccount&param1=storecredit" class="button marg-bottom"><venda_text id=desktop.button.view_remaining_store_credit></a>
+              </div>
+          </div>
+
+          <div class="box">
+              <div class="box-header"><h3><venda_text id=desktop.heading.communication_options></h3></div>
+              <div class="box-body">
+
+                      <venda_userinfo>
+                              <venda_block label=1,sesblkpost=1,sesblkemail=1,sesblksms=1,sesblktrdcomm=1,operator=or>
+                              <table>
+                                    <thead>
+                                      <tr>
+                                          <th></th>
+                                          <th scope="col"><venda_text id=desktop.form.communication_email></th>
+                                          <th scope="col"><venda_text id=desktop.form.communication_post></th>
+                                          <th scope="col"><venda_text id=desktop.form.communication_sms></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                         <th align="right"><venda_text id=desktop.form.company_communication_options></th>
+                                         <th><venda_block label=11,sesblkemail=1><i class="icon-tick icon-small"></i></venda_block label=11></th>
+                                         <th><venda_block label=12,sesblkpost=1><i class="icon-tick icon-small"></i></venda_block label=12></th>
+                                         <th><venda_block label=13,sesblksms=1><i class="icon-tick icon-small"></i></venda_block label=13></th>
+                                      </tr>
+                                      <tr>
+                                         <th align="right"><venda_text id=desktop.form.3rdparty_communication_options></th>
+                                         <th><venda_block label=14,sesblktrdcomm=1><i class="icon-tick icon-small"></i></venda_block label=14></th>
+                                         <th></th>
+                                         <th></th>
+                                      </tr>
+                                    </tbody>
+                              </table>
+                              </venda_block label=1>
+
+                              <venda_block label=2,sesblkemail!=1,sesblkpost!=1,sesblksms!=1>
+                                  <p><venda_text id=desktop.info.communication_options_unsubscribed></p>
+                              </venda_block label=2>
+
+                      </venda_userinfo>
+
+                     <a href="<venda_codehttps>?ex=tl_user-myform&bsref=<venda_bsref>&layout=myaccount&htxt=<venda_htxt mode=make,comm=change>" class="button"><venda_text id=desktop.button.edit_communication_options></a>
+              </div>
+          </div>
+
+          <div class="box">
+              <div class="box-header"><h3><venda_text id=desktop.heading.address_book></h3></div>
+              <div class="box-body">
+                  <div class="panel">
+                      <venda_detblock>
+                      <venda_block label=defaultdelivery,default1=1>
+                        <venda_block label=10,abrfnbr1&gt;0>
+
+                          <h4><venda_text id=desktop.info.default_delivery_address>
+                            <venda_block label=101,adtype1=1>
+                              <venda_text id=desktop.heading.billing_address>
+                            </venda_block label=101>
+
+                            <venda_block label=102,adtype1=0>
+
+                              <venda_block label=11,mode=value,<venda_company1>=c/o <venda_setting type=ebiz,name=name>>- <venda_text id=desktop.heading.deliver_to_store></venda_block label=11>
+
+                              <venda_block label=13,addrname1=notnull> - <venda_addrname1></venda_block label=13>
+
+                            </venda_block label=102>
+                          </h4>
+
+                          <p>
+                            <strong><venda_title1> <venda_fname1><venda_block label=77,mname1=notnull> <venda_mname1></venda_block label=77> <venda_lname1></strong><br>
+
+                            <venda_block label=31,company1=notnull><venda_company1><br></venda_block label=31>
+                            <venda_block label=41,num1=notnull><venda_num1><br> </venda_block label=41><venda_addr11><br><venda_block label=3,addr21=notnull><venda_addr21><br></venda_block label=3>
+
+                            <venda_tpcomment><!-- if country is US or US Non-48 display this formatting --></venda_tpcomment>
+                            <venda_block label=999,mode=value,<venda_cntry1>=United States,<venda_cntry1>=United States Non-48,<venda_cntry1>=United States Armed Forces,operator=or>
+                            <venda_city1>, <venda_block label=42,state1=notnull><venda_state1><br> </venda_block label=42><venda_zipc1><br>
+                            </venda_block label=999>
+
+                            <venda_tpcomment><!-- if country is NOT US or US entities display this formatting --></venda_tpcomment>
+                            <venda_block label=9991,mode=value,<venda_cntry1>!=United States,<venda_cntry1>!=United States Non-48,<venda_cntry1>!=United States Armed Forces,operator=and>
+                            <venda_city1><br>
+                            <venda_block label=42,state1=notnull><venda_state1><br> </venda_block label=42><venda_zipc1><venda_block label=1234,state1=notnull,zipc1=notnull,operator=or><br></venda_block label=1234>
+                            </venda_block label=9991>
+
+                            <venda_cntry1><br>
+                            <venda_block label=12,phone1=notnull><venda_phone1></venda_block label=12>
+                          </p>
+
+                        </venda_block label=10>
+                      </venda_block label=defaultdelivery>
+                      </venda_detblock>
+                      <venda_detail>
+                  </div>
+                  <a href="<venda_codehttps>?ex=co_wizr-myaccount&log=22&step=addressbook&bsref=<venda_bsref>" class="button"><venda_text id=desktop.button.view_address_book></a>
+              </div>
+          </div>
+  </venda_block label=31>
+</div>
+
+<venda_tpxt mode=set,name=trackingstep,value=myaccount>
+<venda_inctemplate name=workflowSteps,type=tracking/shared>
+<venda_tpcomment><!-- Used for html title --></venda_tpcomment>
+<venda_tpxt mode=set,name=title,value=<venda_text id=desktop.heading.myaccount>>

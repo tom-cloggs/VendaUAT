@@ -1,0 +1,142 @@
+<div id="deliveryoption" class="<venda_workflow> deliveryoption">
+<div class="row userInfo nomarg">
+          <div class="large-8 small-8 columns"><venda_bfname> <venda_blname></div>
+          <div class="large-16 small-16 columns text-left"><venda_usemail></div>
+</div>
+<div class="row nomarg">
+<div class="large-20 columns large-centered">
+<div class="dtsStorelocator">
+
+	<div class="text-center">
+		<h2><venda_text id=desktop.heading.store_nearest></h2>		
+		<div class="text-left "><div class="currentStore"><div id="js-loading" class="text-center thickmarg" style="display:none;"><i class="icon-spinner icon-spin icon-4x"></i></div>
+		<ul id="currentStore"><li id="js-noresult" style="display:none;">No result</li></ul></div></div>	
+	</div>
+
+<div class="row">
+	<div class="large-12 columns  large-centered text-center">
+	<h1><venda_text id=desktop.heading.delivery_options></h1>
+		<div class="marg-bottom"><a class="button expand" href="<venda_wizurl step=delivertostore>&param2=deliveryoption&orderdesksesid=<venda_orderdesksesid>&param3=<venda_orderdesksesid>"><venda_text id=desktop.button.deliver_to_store></a></div>
+		<div class="marg-bottom"><a class="button expand" href="<venda_wizurl step=addressbook>&orderdesksesid=<venda_orderdesksesid>&param3=<venda_orderdesksesid>&param2=deliveryoption"><venda_text id=desktop.button.view_address_book></a>	  </div>
+		<div class="marg-bottom"><a class="button expand" href="<venda_wizurl step=deliveryaddressadd>&orderdesksesid=<venda_orderdesksesid>&param3=<venda_orderdesksesid>&param2=deliveryoption"><venda_text id=desktop.button.add_new_address></a></div>		
+	</div>
+</div>
+</div>
+
+	<div class="delivertostoreadd" style="display:none;">	
+	<h1><venda_text id=desktop.heading.deliver_to_store></h1>
+
+	<div class="dtsStorelocator">
+		<!-- Store locator include -->
+		<venda_inctemplate name=storeLocatorinstore,type=includes>
+	</div>		
+
+	<div class="dtsAddress panel">
+		<p class="addressName"><span id="spanName"><venda_addrname></span></p>
+		<p><span id="spanCom" class="hide">c/o <venda_setting type=ebiz,name=name></span></p>
+		<p><span id="spanAdd1"> <venda_addr1></span><span id="spanAdd2"> <venda_addr2></span></p>
+		<p><span id="spanCity"> <venda_city></span> <span id="spanState"> <venda_state></span> <span id="spanZipc"> <venda_zipc></span></p>
+		<p><span id="spanCntry"> <venda_cntry></span></p>
+		<p><span id="spanPhone"> <venda_phone></span></p>
+	</div>
+	
+	<venda_block label=1,errors=notnull><h2 class="alert-box alert radius"><venda_errors></h2></venda_block label=1>     
+	<form id="dtsform" method="post" name="deliveryaddressaddform" action="<venda_codehttps>" >
+		<input type="hidden" name="ex" value="co_wizr-<venda_workflow>" />
+		<input type="hidden" name="workflowid" value="<venda_workflowid>" />
+		<input type="hidden" name="curstep" value="deliveryoption" /> <venda_tpcomment><!-- curstep doesn't translate, so hardcoding --></venda_tpcomment>
+		<input type="hidden" name="curparam1" value="delivery"> 
+		<input type="hidden" name="curparam2" value="storeadd">
+		<input type="hidden" name="abrfnbr" value="<venda_curparam1>">
+		<input type="hidden" name="trrfnbr" value="<venda_userinfo><venda_sesid></venda_userinfo>" />
+		<input type="hidden" name="mode" value="process" />
+		<venda_block errors=null><input type="hidden" name="curlayout" value="instore" /></venda_block>
+		<input type="hidden" name="default" value="1">
+		<input type="hidden" name="param2" value="add" /> 
+		<input type="hidden" name="step" value="ordersummary" />    
+		<input type="hidden" name="orderdesksesid" value="<venda_orderdesksesid>">
+		<input type="hidden" name="param3" value="<venda_orderdesksesid>">		
+		
+		<div id="storedeliveryaddress" style="display:none">	
+		<div class="row">
+		<div class="large-12 columns js-custom">
+		<select name="title" id="title">
+			<option value="Mr"><venda_text id=desktop.form.title.mr></option>
+			<option value="Mrs"><venda_text id=desktop.form.title.mrs></option>
+			<option value="Miss"><venda_text id=desktop.form.title.miss></option>
+			<option value="Ms"><venda_text id=desktop.form.title.ms></option>
+			<option value=" "><venda_text id=desktop.form.title.other></option>
+		</select>					
+		</div>
+		</div>
+			<input type="text" name="fname" id="fname" value="<venda_sesfname>" placeholder="<venda_text id=desktop.form.fname> <venda_text id=desktop.form.required>" required="required" autofocus="autofocus" />
+			<input type="text" name="lname" id="lname" value="<venda_seslname>" placeholder="<venda_text id=desktop.form.lname> <venda_text id=desktop.form.required>" required="required" />
+				 <div class="hide">
+					<div>
+					<span>c/o <venda_setting type=ebiz,name=name></span>				
+					<input type="hidden" name="company" value="c/o <venda_setting type=ebiz,name=name>">
+					</div>
+					<div>
+					<span> <venda_num></span>
+					<input type="hidden" name="num" value="<venda_num>">
+					</div>
+					<div>
+					<span> <venda_addr1></span>
+					<input type="hidden" name="addr1" value="<venda_addr1>">
+					</div>
+					<div>
+					<span> <venda_addr2></span>
+					<input type="hidden" name="addr2" value="<venda_addr2>">
+					</div>
+					<div>
+					<span> <venda_city></span>
+					<input type="hidden" name="city" value="<venda_city>">
+					</div>
+					<div>
+					<span> <venda_state></span>
+					<input type="hidden" name="state" value="<venda_state>">
+					</div>
+					<div>
+					<span> <venda_zipc></span>
+					<input type="hidden" name="zipc" value="<venda_zipc>">
+					</div>
+					<div>
+					<span> <venda_phone></span>
+					<input type="hidden" name="phone" value="<venda_phone>">
+					</div>
+					<div>
+					<span> <venda_cntry></span>
+					<input type="hidden" name="cntry" value="<venda_cntry>">
+					</div>
+					<div>
+					<span><venda_addrname></span>
+					<input type="hidden" name="addrname" value="<venda_addrname>">
+					</div>
+				</div>
+				<hr>
+			<div class="text-center"><input type="submit" value="<venda_text id=desktop.button.confirm_and_continue>" class="button" id="dtsSubmit"> </div>     		
+		</div>  
+		
+	</form>	
+	</div>
+</div>
+</div>
+</div>
+<venda_tpcomment><!-- Used for checkout step indicators --></venda_tpcomment> 
+<venda_tpxt mode=set,name=curstep,value=step2> 
+<venda_tpcomment><!-- Used for html title --></venda_tpcomment>
+<venda_tpxt mode=set,name=title,value=<venda_text id=desktop.heading.deliver_to_store>>
+
+<!-- Venda vars to be passed to JS -->
+<div id="venda_cntry" style="display: none;"><venda_cntry></div>
+<div id="venda_state" style="display: none;"><venda_state></div>
+<div id="venda_locn" style="display: none;"><venda_sessionlocation></div>
+
+<!-- Localisation to be passed to JS -->
+<div id="user_details_label_us_state" style="display: none;"><venda_text id=desktop.form.state_us></div>
+<div id="user_details_label_us_zip" style="display: none;"><venda_text id=desktop.form.zipc_us></div>
+<div id="user_details_label_uk_county" style="display: none;"><venda_text id=desktop.form.state></div>
+<div id="user_details_label_non_us_postcode" style="display: none;"><venda_text id=desktop.form.zipc></div>
+<div id="user_details_label_non_us_uk_region" style="display: none;"><venda_text id=desktop.form.region></div>
+<div id="please_select_multi_dot" style="display: none;"><venda_text id=desktop.form.please_select_multi_dot></div>
+<venda_inctemplate name=workflowSteps,type=tracking/shared>

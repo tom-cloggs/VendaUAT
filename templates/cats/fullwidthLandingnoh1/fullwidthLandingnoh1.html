@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="large-24 columns marg-bottom">       
+       
+        <venda_block errors=notnull><h2 class="alert-box alert radius" data-alert=""><venda_errors></h2></venda_block>
+        <div class="large-centered"><venda_page page=<venda_icxtcategoryheader>></div>
+        <venda_block label=isdescription,icxtdisabledescription=>
+            <venda_block label=desc,med-catimage=notnull,icatldesc=notnull,operator=or>
+            <div class="box icat_icatldesc hide-for-small thickmarg-top"><div class="box-body nopad">
+            <venda_block label=4,med-catimage=notnull>
+                <div class="row nomarg"><div class="large-12 columns thickpad"><venda_icatldesc></div><div class="large-12 columns" style="background:url(<venda_media rec=icat,type=movie-swf-pict,key=catimage,img=no>) no-repeat right;background-size: 100% auto;padding-bottom: 27%;"></div></div>
+            </venda_block label=4>
+            <venda_block label=5,med-catimage=null><div class="thickpad"><venda_icatldesc></div></venda_block label=5>
+            </div></div>
+            </venda_block label=desc>
+        </venda_block label=isdescription>
+
+    </div>
+
+</div>
+
+<venda_tpxt mode=set,name=track,value=categorylist>

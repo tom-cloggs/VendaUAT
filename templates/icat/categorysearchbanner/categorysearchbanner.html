@@ -1,0 +1,30 @@
+<div class="icatheading row">
+
+<venda_block label=brandlogo,icxtbrand=notnull>
+
+<div class="large-3 columns right">
+	<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/brandLogos/<venda_icxtbrand>" alt="Brand logo" class="icatlogo hide-for-small">
+</div>
+
+<div class="large-24 columns" id="icatheader">
+<h1 class="search-header search-cat-name nomarg text-center"><venda_icatname></h1>
+</div>
+
+</venda_block label=brandlogo>
+
+<venda_block label=brandlogo,icxtbrand=null><div class="large-24 columns"><h1 class="search-header search-cat-name nomarg text-center"><venda_icatname></h1></div></venda_block label=brandlogo>
+
+</div>
+
+<venda_block label=isdescription,icxtdisabledescription=>
+    <venda_block label=desc,med-catimage=notnull,icatldesc=notnull,operator=or>
+    <div class="box icat_icatldesc hide-for-small"><div class="box-body nopad">
+    <venda_block label=4,med-catimage=notnull>
+        <div class="row nomarg pad-side"><div class="large-12 columns thickpad"><venda_icatldesc></div><div class="large-12 columns" style="background:url(<venda_media rec=icat,type=movie-swf-pict,key=catimage,img=no>) no-repeat right;background-size: 100% auto;padding-bottom: 27%;"></div></div>
+    </venda_block label=4>
+    <venda_block label=5,med-catimage=null><div class="thickpad"><venda_icatldesc></div></venda_block label=5>
+    </div></div>
+    </venda_block label=desc>
+</venda_block label=isdescription>
+
+<venda_page page=<venda_icxtcategoryheader>>

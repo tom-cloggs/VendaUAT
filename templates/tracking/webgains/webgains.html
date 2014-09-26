@@ -1,0 +1,40 @@
+<!-- <webgains tracking code> -->
+<script language="javascript" type="text/javascript">
+<!--
+var wgLang = "en_GB";
+var wgVersion="1.1";
+var wgProgramID=116;
+var wgOrderReference="<venda_ohordnum>";
+var wgOrderValue="<venda_tracking type=order,definition=ordertotal,exvat=1,exship=1>";
+var wgEventID=219;
+var wgSubDomain="track";
+var wgComment="";
+var wgCheckSum = "";
+
+
+
+var orderitems = Venda.Widget.Tracking.orditemsArray;
+var itemsInOrder ="";
+
+for (i=0;i<Venda.Widget.Tracking.orditemsArray.length;i++){
+    itemsInOrder += wgEventID+"::"+orderitems[i].price+"::"+orderitems[i].name+"::"+orderitems[i].sku+"|";
+}
+
+var lastposition = itemsInOrder.lastIndexOf("|");
+if (lastposition!=-1){itemsInOrder = itemsInOrder.slice(0,lastposition);}
+
+
+var wgItems = itemsInOrder;
+wgItems=escape(wgItems);
+
+if(location.protocol.toLowerCase() == "https:") wgProtocol="https";
+else wgProtocol="http";
+
+wgUri = wgProtocol + "://" + wgSubDomain + ".webgains.com/transaction.html" + "?wgver=" + wgVersion + "&wgprotocol=" + wgProtocol + "&wgsubdomain=" + wgSubDomain + "&wglang=" + wgLang + "&wgprogramid=" + wgProgramID + "&wgeventid=" + wgEventID + "&wgvalue=" + wgOrderValue + "&wgchecksum=" + wgCheckSum + "&wgorderreference="  + wgOrderReference + "&wgcomment=" + escape(wgComment) + "&wgitems=" + wgItems + "&ref=" + escape(document.referrer);
+document.write('<sc'+'ript language="JavaScript"  type="text/javascript" src="'+wgUri+'"></sc'+'ript>');
+-->
+</script>
+<noscript>
+<img src="https://track.webgains.com/transaction.html?wgprogramid=116&wgvalue=<venda_tracking type=order,definition=ordertotal,exvat=1,exship=1>&wgeventid=219&wgorderreference=<venda_ohordnum>" alt="" />
+</noscript>
+<!-- </webgains tracking code> -->

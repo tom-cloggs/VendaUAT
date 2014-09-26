@@ -1,0 +1,333 @@
+<div id="orderreceipt" class="<venda_workflow> <venda_curstep>">
+       <div class="main-header  thickmarg-bottom"> <h1 class="nomarg"><venda_text id=desktop.heading.order_detail> - <venda_ohordnum></h1></div>
+
+    <venda_block label=1,errors=notnull><h2 class="alert-box alert radius" data-alert=""><venda_errors></h2></venda_block label=1>
+    <p><venda_text id=desktop.info.order_history_detail_1> <strong><venda_ohordnum><venda_block label=307,ohordnum=null><venda_ohrfnbr></venda_block label=307></strong>, <venda_text id=desktop.info.order_history_detail_2> <strong><venda_block label=88,mode=value,<venda_setting type=ebiz,name=mmdddates>!=1><venda_ohstmpdaynamefull> <venda_ohstmpday> <venda_ohstmpmonthnamefull> <venda_ohstmpyear></venda_block label=88><venda_block label=89,mode=value,<venda_setting type=ebiz,name=mmdddates>=1><venda_ohstmpdaynamefull> <venda_ohstmpmonthnamefull> <venda_ohstmpday> <venda_ohstmpyear></venda_block label=89></strong>.</p>
+    <p><venda_text id=desktop.info.order_history_detail_3>
+    <strong>
+        <venda_block label=10,ohstatus=On Hold><venda_text id=desktop.info.order_status_in_progress></venda_block label=10>
+        <venda_block label=11,ohstatus=Released for delivery><venda_text id=desktop.info.order_status_released_for_delivery></venda_block label=11>
+        <venda_block label=12,ohstatus=Backordered><venda_text id=desktop.info.order_status_backordered></venda_block label=12>
+        <venda_block label=13,ohstatus=Delivered><venda_text id=desktop.info.order_status_despatched></venda_block label=13>
+        <venda_block label=14,ohstatus=Returned><venda_text id=desktop.info.order_status_returned></venda_block label=14>
+        <venda_block label=15,ohstatus=Cancelled><venda_text id=desktop.info.order_status_cancelled></venda_block label=15>
+    </strong>
+    </p>
+
+    <venda_block label=15,ohpaytype=2,ohpaytype=3,ohpaytype=4,ohpaytype=5,ohpaytype=7,operator=or>
+    <p>
+        <venda_block label=17,ohpaytype=2><venda_text id=desktop.info.order_lookup_send_in_payment><venda_block label=39,ohoverpaid&gt;0,ohoverpaid=notnull><venda_text id=desktop.info.order_lookup_overpaid></venda_block label=39>.</venda_block label=17>
+        <venda_block label=16,ohpaytype=3><venda_text id=desktop.info.order_lookup_purchase_order><venda_block label=14,ohponum=notnull><venda_text id=desktop.info.order_lookup_purchase_order_num></venda_block label=14>.</venda_block label=16>
+        <venda_block label=10,ohpaytype=4><venda_text id=desktop.info.order_lookup_store_credit></venda_block label=10>
+        <venda_block label=18,ohpaytype=5><venda_text id=desktop.info.order_lookup_manual_payment></venda_block label=18>
+        <venda_block label=20,ohpaytype=7><venda_text id=desktop.info.order_lookup_fax_payment></venda_block label=20>
+    </p>
+    </venda_block label=15>
+
+    <venda_tpcomment><!-- Start: Package Summary --></venda_tpcomment>
+        <venda_detblock1>
+		<venda_block label=46,pkshipreq!=1>
+			 <div class="box"> <div class="box-body"><p><venda_text id=desktop.info.order_details_services_and_gift_certificates></p></div></div>
+		</venda_block label=46>
+		<div class="row">
+		<venda_block label=47,pkshipreq=1>
+			<div class="large-12 columns">
+			<!-- start delivery address -->
+			<div class="box">
+				<venda_block label=601,mode=value,<venda_pkcompany>!=c/o <venda_setting type=ebiz,name=name>>
+				<h6 class="box-header"><venda_text id=desktop.heading.delivery_details></h6>
+				</venda_block label=601>
+				<venda_block label=602,mode=value,<venda_pkcompany>=c/o <venda_setting type=ebiz,name=name>>
+				<h6 class="box-header"><venda_text id=desktop.heading.deliver_to_store></h6>
+				</venda_block label=602>
+				<div class="box-body">
+					<p><span><strong><venda_block label=181,pktitle=notnull><venda_pktitle> </venda_block label=181><venda_pkfname><venda_block label=77,pkmname=notnull> <venda_pkmname></venda_block label=77> <venda_pklname></strong></span><br>
+					<venda_block label=71,pkcompany=notnull><venda_pkcompany><br></venda_block label=71>
+					<venda_block label=182,pknum=notnull><venda_pknum> </venda_block label=182><venda_block label=183,pkaddr1=notnull><venda_pkaddr1><br></venda_block label=183>
+					<venda_block label=72,pkaddr2=notnull><venda_pkaddr2><br></venda_block label=72>
+
+					<!-- if country is US or US entities display this formatting -->
+					<venda_block label=999,mode=value,<venda_pkcntry>=United States,<venda_pkcntry>=United States Non-48,<venda_pkcntry>=United States Armed Forces,operator=or>
+					<venda_block label=184,pkcity=notnull><venda_pkcity>, </venda_block label=184>
+					<venda_block label=185,pkstate=notnull><venda_pkstate> </venda_block label=185><venda_pkzipc><br>
+					</venda_block label=999>
+
+					<!-- if country is NOT US or US entities display this formatting -->
+					<venda_block label=9991,mode=value,<venda_pkcntry>!=United States,<venda_pkcntry>!=United States Non-48,<venda_pkcntry>!=United States Armed Forces,operator=and>
+					<venda_block label=184,pkcity=notnull><venda_pkcity><br></venda_block label=184>
+					<venda_block label=185,pkstate=notnull><venda_pkstate> </venda_block label=185><venda_pkzipc><venda_block label=1234,pkstate=notnull,pkzipc=notnull,operator=or><br></venda_block label=1234>
+					</venda_block label=9991>
+
+					<venda_block label=56,pkcntry=notnull><venda_pkcntry></venda_block label=56>
+					<venda_block label=43,pkarea=notnull,pkphone=notnull,operator=or><br><span><venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_block label=11,pkarea=notnull><venda_pkarea>&nbsp;</venda_block label=11></venda_block label=100><venda_block label=12,pkphone=notnull><venda_pkphone></venda_block label=12></span></venda_block label=43>
+					</p>
+				</div>
+			</div>
+			<!-- end delivery address -->
+			</div>
+			<div class="large-12 columns delivery-method">
+			<div class="box">
+				<h6 class="box-header"><venda_text id=desktop.heading.delivery_method></h6>
+				<div class="box-body js-deliveryoptions">
+					<div class="left"><p><venda_pkshipmthd></p></div>
+					<a target="_blank" class="small button secondary marg-top js-doDialog right" href="<venda_dispview page=deliveryinfo>"><venda_text id=desktop.button.more_info></a>
+				</div>
+			</div>
+			</div>
+		</venda_block label=47>
+		</div>
+            <div class="<venda_block label=472,pkshipreq!=1> order-noship</venda_block label=472> table-overflow">
+                <table width="100%" cellpadding="0" cellspacing="0" summary="<venda_text id=desktop.info.items_table_summary>" title="<venda_text id=desktop.info.items_table_title>">
+                <thead>
+                    <tr>
+                        <th scope="col"><span><venda_text id=desktop.info.item_description></span></th>
+                        <th scope="col" class="text-center"><span><venda_text id=desktop.info.total_price></span></th>
+                        <th scope="col" class="text-center"><venda_text id=desktop.info.status></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <venda_detblock2><venda_tpcomment><!-- start: Product Information (detblock2) --></venda_tpcomment>
+                    <tr class="prod">
+				<td>
+                        <div class="prod-image large-10 columns">
+                            <venda_tpcomment><!-- giftcertificate image --></venda_tpcomment>
+                            <venda_block label=50,oiitype=3>
+                                <venda_block label=501,med-rxsmall=notnull><venda_media rec=invt,type=pict,key=rxsmall></venda_block label=501>
+                                <venda_block label=502,med-rxsmall=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_xsmall.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=502>
+                            </venda_block label=50>
+                            <venda_tpcomment><!-- normal product image --></venda_tpcomment>
+                            <venda_block label=51,oiitype!=3>
+                                <venda_block label=511,med-rxsmall=notnull><venda_media rec=invt,type=pict,key=rxsmall></venda_block label=511>
+                                <venda_block label=512,med-rxsmall=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_xsmall.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=512>
+                            </venda_block label=51>
+                        </div>
+
+                        <div class="prod-details text-left large-14 columns">
+                            <h6 class="prod-name"><venda_oiivname></h6>
+					<venda_block label=52,oiitype!=3>
+						<venda_block label=111,invtatt1=notnull,invtatt2=notnull,invtatt2=notnull,invtatt4=notnull,operator=or>
+							<div class="prod-options pad-top">
+								<venda_block label=456,invtatt1=notnull><div><strong><venda_text id=desktop.info.att1_label>:</strong> <venda_invtatt1></div></venda_block label=456>
+								<venda_block label=457,invtatt2=notnull><!--div><strong><venda_invtatrlbl2 >:</strong> <venda_invtatt2 ></div--></venda_block label=457>
+								<venda_block label=458,invtatt3=notnull><!--div><strong><venda_invtatrlbl3 >:</strong> <venda_invtatt3 ></div--></venda_block label=458>
+								<venda_block label=459,invtatt4=notnull><!--div><strong><venda_invtatrlbl4 >:</strong> <venda_invtatt4 ></div--></venda_block label=459>
+							</div>
+						</venda_block label=111>
+						<venda_block label=221,oigwrefqty=notnull>
+							<div class="pad-top">
+								<venda_tpcomment><!-- Start: Gift wrapping --></venda_tpcomment>
+								<hr />
+								<p>
+									<venda_block label=42,oiqty!=1><venda_text id=desktop.info.giftwrapping_items_wrapped> </venda_block label=42>
+									<venda_block label=43,oiqty=1><venda_text id=desktop.info.giftwrapping_items_wrapped> </venda_block label=43>
+								</p>
+								<p><venda_inventory ref=<venda_oigwref>,temp=productName></p>
+								<venda_block label=456,oicmtmsgqty=notnull>
+									<span><venda_text id=desktop.info.message>:</span> <span><venda_oicmt></span>
+								</venda_block label=456>
+								<venda_tpcomment><!-- End: Gift wrapping --></venda_tpcomment>
+							</div>
+						</venda_block label=221>
+						<venda_block label=225,invtpreorder=notnull>
+							<div class="pad-top">
+								<p><venda_text id=desktop.info.att_preorder> <venda_block label=88,mode=value,<venda_setting type=ebiz,name=mmdddates>!=1><venda_invtreleasedy>/<venda_invtreleasemn>/<venda_invtreleaseyr></venda_block label=88><venda_block label=89,mode=value,<venda_setting type=ebiz,name=mmdddates>=1><venda_invtreleasemn>/<venda_invtreleasedy>/<venda_invtreleaseyr></venda_block label=89></p>
+							</div>
+						</venda_block label=225>
+					</venda_block label=52>
+                                <div>
+                                    <venda_block label=sku,oiitype!=3><!--p class="prod-sku"><small><venda_text id=desktop.info.sku>: <venda_ invtref></small></p--></venda_block label=sku>
+                                    <p class="prod-price"><strong><venda_oiqty></strong> x <venda_ohcursym><venda_oisub></p>
+                                </div>
+
+                                <venda_block label=45,oiitype=3>
+                                    <div class="pad-top">
+                                        <p>
+                                            <venda_text id=desktop.info.giftcert_sent_to>
+
+                                            <venda_block label=880,gcexpires=notnull><br>
+                                            <venda_text id=desktop.info.expiry_date>: <venda_block label=88,mode=value,<venda_setting type=ebiz,name=mmdddates>!=1><venda_gcexpires></venda_block label=88><venda_block label=89,mode=value,<venda_setting type=ebiz,name=mmdddates>=1><venda_dateformat type=digit,format=mm/dd/yyyy,suffix=0,date=<venda_gcexpires>></venda_block label=89>
+                                            </venda_block label=880>
+
+                                        <br>
+                                            <venda_text id=desktop.info.message> <venda_oicmt>
+                                            <!-- <br>From: <strong><venda_gcfrom></strong> -->
+                                        </p>
+                                    </div>
+                                </venda_block label=45>
+						</div>
+                            </td>
+                            <td class="prod-total text-right"><venda_ohcursym><venda_oiextsub></td>
+                            <td>
+                                <venda_block label=10,oistatus=2><venda_text id=desktop.info.order_status_in_progress></venda_block label=10>
+                                <venda_block label=11,oistatus=3><venda_text id=desktop.info.order_status_released_for_delivery></venda_block label=11>
+                                <venda_block label=12,oistatus=4><venda_text id=desktop.info.order_status_backordered></venda_block label=12>
+                                <venda_block label=13,oistatus=5><venda_block label=114,num=notnull><venda_text id=desktop.info.tracking_num>: <venda_num> <venda_ohoicarrier> </venda_block label=114><venda_text id=desktop.info.order_status_despatched> <venda_stmp></venda_block label=13>
+                                <venda_block label=14,oistatus=6><venda_text id=desktop.info.order_status_returned></venda_block label=14>
+                                <venda_block label=15,oistatus=7><venda_text id=desktop.info.order_status_cancelled></venda_block label=15>
+                            </td>
+                        </tr>
+                        <venda_tpcomment><!-- End: detblock2 - Product Information --></venda_tpcomment>
+                    </venda_detblock2>
+
+                    <venda_detail2>
+                </tbody>
+                </table>
+            </div>
+
+            <venda_block label=16,cancelownitems=1>
+            <venda_block label=305,pkstatus=2,pkstatus=4,operator=or>
+                <p><venda_text id=desktop.info.cancel_items_1></p>
+            </venda_block label=305>
+            <venda_block label=303,pkstatus=2,pkstatus=4,operator=or>
+                <a href="#" onClick='cancel(<venda_ohrfnbr>); return false;'><venda_text id=desktop.button.cancel_items></a>
+            </venda_block label=303>
+            <venda_block label=306,pkstatus=5,allgiftcert=1>
+                <a href="#" onClick='cancel(<venda_ohrfnbr>); return false;'><venda_text id=desktop.button.cancel_items></a>
+            </venda_block label=306>
+            </venda_block label=16>
+
+        </venda_detblock1>
+
+        <venda_detail1>
+        <venda_tpcomment><!-- End: Package Summary --></venda_tpcomment>
+
+        <venda_tpcomment><!-- Start: Order Summary --></venda_tpcomment>
+        <div id="ordersummary" class="pad-top">
+            <div class="border thickmarg-top"><h2><venda_text id=desktop.heading.order_totals></h2></div>
+            <table width="100%" summary="<venda_text id=desktop.info.order_totals_summary>" title="<venda_text id=desktop.info.order_totals_title>">
+                <tr>
+                    <th scope="row" class="text-left"><venda_text id=desktop.info.subtotal></th>
+                    <td class="text-right"><venda_ohcursym><venda_ohsub></td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-left"><venda_text id=desktop.info.delivery_cost></th>
+                    <td class="text-right"><venda_ohcursym><venda_ohship></td>
+                </tr>
+                <venda_block label=64,showdiscount=1>
+                <!-- start discount -->
+                <tr>
+                    <th scope="row" class="text-left"><venda_text id=desktop.info.discount></th>
+                    <td class="text-right">-<venda_ohcursym><venda_ohdisc></td>
+                </tr>
+                <!-- end discount -->
+                </venda_block label=64>
+                <venda_block label=91,ohtax!=0.00,ohtax=notnull>
+                <tr>
+                    <th scope="row" class="text-left"><venda_text id=desktop.info.estimated_tax></th>
+                    <td class="text-right"><venda_ohcursym><venda_ohtax></td>
+                </tr>
+                </venda_block label=91>
+                <venda_block label=68,ohgwtot&gt;0>
+                    <tr>
+                        <th scope="row" class="text-left"><venda_text id=desktop.info.giftwrapping></th>
+                        <td class="text-right"><venda_ohcursym><venda_ohgwtot></td>
+                    </tr>
+                </venda_block label=68>
+                <venda_taxbreakdown ohrfnbr=<venda_ohrfnbr>,template=shipTaxBreakDown>
+                <venda_block label=66,enablefreeorder=1>
+                        <venda_block label=661,ohbal=0.00>
+                        <input type="hidden" name="ohpaytype" value="8">
+                            <tr>
+                                <th scope="row" class="text-left"><venda_text id=desktop.info.free_order></th>
+                            </tr>
+                        </venda_block label=661>
+                </venda_block label=66>
+                <tr class="ordertotal">
+                    <th scope="row" class="text-left"><venda_text id=desktop.info.order_total><venda_block label=191,ohtaxinc!=0.00,ohtaxinc=notnull> <venda_text id=desktop.info.including_vat></venda_block label=191></th>
+                    <td class="text-right"><strong><venda_ohcursym><venda_ohtot></strong></td>
+                </tr>
+                <venda_block label=65,showaccount=1,storecreditused&gt;0.00,creditused&gt;0.00,operator=or>
+                    <venda_block label=82,enablestorecredit=1,creditused&gt;0.00,operator=or>
+                        <venda_block label=80,showpayments=null>
+                            <input type="hidden" name="ohpaytype" value="4">
+                        </venda_block label=80>
+                        <input type="hidden" name="usestorecredit" value="1">
+                        <venda_block label=70,creditused&gt;0.00>
+                            <tr>
+                                <th scope="row" class="text-left"><venda_text id=desktop.info.store_credit_used></th>
+                                <td class="text-right"><venda_ohcursym><venda_creditused></td>
+                            </tr>
+                        </venda_block label=70>
+                        <venda_block label=41,storecredit&gt;0.00>
+                            <tr>
+                                <th scope="row" class="text-left"><venda_text id=desktop.info.store_credit_remaining></th>
+                                <td class="text-right"><venda_ohcursym><venda_storecredit></td>
+                            </tr>
+                        </venda_block label=41>
+                        <tr>
+                            <th scope="row" class="text-left"><venda_text id=desktop.info.store_credit_balance></th>
+                            <td class="text-right"><venda_ohcursym><venda_ohbal></td>
+                        </tr>
+                    </venda_block label=82>
+                </venda_block label=65>
+            </table>
+        </div>
+        <venda_tpcomment><!-- End: Order Summary --></venda_tpcomment>
+
+        <div id="paymentdetailSection" class="pad-top">
+		<div class="border thickmarg-top"><h2><venda_text id=desktop.heading.payment_details></h2></div>
+		<div class="row">
+            <venda_tpcomment><!-- 255b and c expand or not the Payment Options Display depending whether the payment is Paypal (ohpaytype=12) or not --></venda_tpcomment>
+            <div class="<venda_block label=255b,ohpaytype!=12>large-15 columns</venda_block label=255b><venda_block label=255c,ohpaytype=12>large-24 columns</venda_block label=255c>">
+
+                <venda_tpcomment><!-- Start: Payment Details --></venda_tpcomment>
+                <venda_paymenttypes templatetype=paytype/frontend,template=paymenttypes_display,ohrfnbr=<venda_ohrfnbr>>
+                <venda_tpcomment><!-- End: Payment Details --></venda_tpcomment>
+            </div>
+            <venda_tpcomment><!-- Start: Contact Details --></venda_tpcomment>
+            <venda_tpcomment><!-- Remove the contact details box if the payment type is PayPal (ohpaytype=12) --></venda_tpcomment>
+
+            <venda_block label=255,ohpaytype!=12>
+            <div id="contactdetails" class="large-9 columns">
+                <div class="box marg-bottom">
+                    <h6 class="box-header"><venda_text id=desktop.heading.billing_address></h6>
+                    <div class="box-body">
+                        <venda_block label=250,ohpaytype!=12>
+                        <p>
+                        <span><venda_ohtitle> <venda_ohfname><venda_block label=77,ohmname=notnull> <venda_ohmname></venda_block label=77> <venda_ohlname></span><br>
+                        <venda_block label=76,ohcompany=notnull><venda_ohcompany><br></venda_block label=76>
+                        <venda_block label=71,ohnum=notnull><venda_ohnum> </venda_block label=71><venda_ohaddr1><br>
+                        <venda_block label=74,ohaddr2=notnull><venda_ohaddr2><br></venda_block label=74>
+
+                        <!-- if country is US or US entities display this formatting -->
+                        <venda_block label=999,mode=value,<venda_ohcntry>=United States,<venda_ohcntry>=United States Non-48,<venda_ohcntry>=United States Armed Forces,operator=or>
+                        <venda_ohcity>, <venda_block label=75,ohstate=notnull><venda_ohstate></venda_block label=75> <venda_ohzipc><br>
+                        </venda_block label=999>
+
+                        <!-- if country is NOT US or US entities display this formatting -->
+                        <venda_block label=9991,mode=value,<venda_ohcntry>!=United States,<venda_ohcntry>!=United States Non-48,<venda_ohcntry>!=United States Armed Forces,operator=and>
+                        <venda_ohcity><br>
+                        <venda_block label=751,ohstate=notnull><venda_ohstate></venda_block label=751> <venda_ohzipc><venda_block label=1234,ohstate=notnull,ohzipc=notnull,operator=or><br></venda_block label=1234>
+                        </venda_block label=9991>
+
+                        <venda_ohcntry><br>
+                        <venda_block label=48,workflow=ordlookup><span><venda_usemail></span><br></venda_block label=48>
+                        <venda_block label=46,workflow=instore,ustype!=P><span id="contactDetails-usemail"><noscript><venda_usemail></noscript></span><br></venda_block label=46>
+                        <venda_block label=47,workflow!=ordlookup,workflow!=instore><span id="contactDetails-usemail"><noscript><venda_usemail></noscript></span><br></venda_block label=47>
+                        <venda_block label=43,oharea=notnull,ohphone=notnull,operator=or><span><venda_block label=100,mode=value,<venda_setting type=ebiz,name=hidearea>!=1><venda_block label=11,oharea=notnull><venda_oharea>&nbsp;</venda_block label=11></venda_block label=100><venda_block label=12,ohphone=notnull><venda_ohphone></venda_block label=12></span></venda_block label=43>
+                        </p>
+                        </venda_block label=250>
+                    </div>
+                </div>
+            </div>
+            </venda_block label=255>
+            <venda_tpcomment><!-- End: Contact Details --></venda_tpcomment>
+		</div>
+        </div>
+	<div id="buttons" class="row thickpad-bottom">
+	<div class="large-12 columns right text-right marg-bottom"><a href="<venda_codehttps>?ex=co_wizr-myaccount&bsref=<venda_bsref>&log=22&step=orderhistory" class="button"><venda_text id=desktop.button.back_to_order_history></a></div>
+	<div class="large-12 columns"><a href="<venda_codehttps>?ex=co_wizr-myaccount&bsref=<venda_bsref>" class="button secondary"><venda_text id=desktop.button.my_account></a></div>
+	</div>
+</div>
+
+<venda_tpxt mode=set,name=trackingstep,value=orderdetail>
+<venda_inctemplate name=workflowSteps,type=tracking/shared>
+<venda_tpcomment><!-- Used for html title --></venda_tpcomment>
+<venda_tpxt mode=set,name=title,value=<venda_text id=desktop.heading.order_detail>>
+
+
+
+
+
+
+

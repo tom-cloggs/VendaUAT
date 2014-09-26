@@ -1,0 +1,113 @@
+<venda_block label=12,paymentavailable=notnull>
+    <!-- credit card payment -->
+    <div class="large-13 columns">
+    <fieldset class="f-credit thinpad-right">
+        <legend><venda_text id=desktop.form.pay_by_credit></legend>
+	<div class="box">
+	<div class="box-body">
+        <div class="credit thickmarg-bottom"<venda_block label=14,paymenttypestot=1> style="display:none"</venda_block label=14>>
+            <div class="row">
+                <div class="large-24 columns">
+                    <div>
+                        <label for="creditcard" class="text-left"><input type="radio" name="ohpaytype" value="0" id="creditcard" <venda_block label=18,paymentselected=notnull>checked</venda_block label=18>><span class="thinpad-side"><venda_text id=desktop.form.pay_by_credit></span> <img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/creditcards_opt.jpg" alt="<venda_text id=desktop.info.accepted_credit_cards>" border="0" width="250" /></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-7 columns">
+                <label for="cardtype" class="hide-for-small"><venda_text id=desktop.form.card_type></label>
+            </div>
+            <div class="large-17 columns">
+                <select name="cardtype" id="cardtype"><venda_paymentselectmethod></select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-7 columns">
+                <label for="ohccnum"><span id="ohccnum-label"><venda_text id=desktop.form.card_number></span><span id="ohccnum-elv-label"><venda_text id=desktop.form.account_number></span></label>
+            </div>
+            <div class="large-17 columns"><input id="ohccnum" type="text" name="ohccnum" value="<venda_ohccnum>" placeholder="<venda_text id=desktop.form.card_number>" size="16" maxlength="50" /></div>
+        </div>
+
+        <div class="row">
+            <div class="large-7 columns"><label for="ohccname"><venda_text id=desktop.form.card_name></label></div>
+            <div class="large-17 columns"><input id="ohccname" type="text" name="ohccname" value="<venda_ohccname>" placeholder="<venda_text id=desktop.form.card_name>" size="16" maxlength="50" /></div>
+        </div>
+
+        <venda_block label=124,mode=value,<venda_setting type=ebiz,name=disablecreditcardstartdate>!=1>
+        <div id="startdateshow" class="row">
+            <div class="large-7 columns">
+                <label for="startmonth"><venda_text id=desktop.form.start_date></label>
+            </div>
+            <div class="large-17 columns">
+			 <div class="row collapse">
+                <div class="small-12 large-12 columns"><venda_startmonth field=combo></div>
+                <div class="small-12 large-12 columns"><label for="formstartyear" class="hidescreenreadersafe"><venda_text id=desktop.form.start_year></label><venda_startyear field=combo></div>
+			</div>
+            </div>
+        </div>
+        </venda_block label=124>
+
+        <div id="expiryshow" class="row">
+            <div class="large-7 columns"><label for="month"><venda_text id=desktop.form.expiry_date></label></div>
+            <div class="large-17 columns">
+                <div class="row collapse">
+                    <div class="small-12 large-12 columns"><venda_month field=combo></div>
+                    <div class="small-12 large-12 columns"><label for="formyear" class="hidescreenreadersafe"><venda_text id=desktop.form.expiry_year></label> <venda_year field=combo></div>
+                </div>
+                <div class="expirydate"></div>
+            </div>
+        </div>
+
+        <div id="ohcccscshow" class="row">
+            <div class="large-7 columns">
+                <label for="ohcccsc"><venda_text id=desktop.form.security_code></label>
+            </div>
+            <div class="large-17 columns">
+                <div class="small-12 large-12 left"><input type="text" name="ohcccsc" id="ohcccsc" value="<venda_ohcccsc>" placeholder="<venda_text id=desktop.form.security_code>" size="4" maxlength="4" /></div>
+                <div class="small-12 large-12 left helpLink"><a href="<venda_dispview page=faqs>" class="right js-doDialog" data-anchor="csc" target="_blank" title="<venda_text id=desktop.info.security_code_help_title>"><venda_text id=desktop.button.need_help></a>
+                <img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/securitycode.gif" alt="<venda_text id=desktop.form.security_code>" border="0" class="right"></div>
+            </div>
+        </div>
+
+        <venda_block label=125,mode=value,<venda_setting type=ebiz,name=disablecreditcardissuenumber>!=1>
+        <div id="ohcccscshow" class="row">
+            <div class="large-7 columns">
+                <label for="ohccissue"><venda_text id=desktop.form.card_issue></label>
+            </div>
+            <div class="large-17 columns">
+                <div class="small-12 large-12 left"><input type="text" name="ohccissue" id="ohccissue" value="<venda_ohccissue>" placeholder="<venda_text id=desktop.form.card_issue>" size="4" maxlength="3"></div>
+                <div class="small-12 large-12 left text-right issueInfo"><venda_text id=desktop.info.issue_number_cards></div>
+            </div>
+        </div>
+        </venda_block label=125>
+
+        <div id="sortcodeshow" class="row">
+            <div class="large-7 columns"><label for="sortcode"><venda_text id=desktop.form.sort_code></label></div>
+            <div class="large-17 columns"><venda_sortcode field=text,size=16,maxlength=50></div>
+        </div>
+
+        <venda_block label=190,mode=value,<venda_glxt mode=get,name=glxtusertype>!=p>
+        <div class="row">
+		 <div class="large-2 columns"></div>
+            <div class="large-17 columns marg-top marg-bottom">
+                <venda_block label=151,dontsavecc=null>
+                <label for="dontsavecc" class="text-left"><input type="checkbox" name="dontsavecc" id="dontsavecc" value="1"><span class="thinpad-side"><venda_text id=desktop.form.dont_save_card></span><a href="<venda_dispview page=faqs>" class="js-doDialog" data-anchor="saving" target="_blank" title="<venda_text id=desktop.info.more_info_title>"><venda_text id=desktop.button.more_info></a></label>
+                </venda_block label=151>
+                <venda_block label=153,dontsavecc=notnull>
+                <label for="dontsavecc" class="text-left"><input type="checkbox" name="dontsavecc" id="dontsavecc" value="1" checked="checked"><span class="thinpad-side"><venda_text id=desktop.form.dont_save_card></span><a href="<venda_dispview page=faqs>" class="js-doDialog" data-anchor="saving"  target="_blank" title="<venda_text id=desktop.info.more_info_title>"><venda_text id=desktop.button.more_info></a></label>
+                </venda_block label=153>
+            </div>
+        </div>
+        </venda_block label=190>
+        <venda_block label=191,mode=value,<venda_glxt mode=get,name=glxtusertype>=p>
+        <venda_tpcomment><!-- donot show during express checkout as payment details are not saved anyway --></venda_tpcomment>
+        <input type="hidden" name="dontsavecc" value="1">
+        </venda_block label=191>
+	</div>
+	</div>		
+    </fieldset>
+    </div>
+</venda_block label=12>

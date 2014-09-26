@@ -1,0 +1,36 @@
+    <form method="post" enctype="multipart/form-data" name="wizform<venda_ohrfnbr>" action="<venda_codehttps>">
+    <input type="hidden" name="ex" value="co_wizr-shopcart" />
+    <input type="hidden" name="step" value="--shopcart" />
+    <input type="hidden" name="param1" value="reorder" />
+    <input type="hidden" name="param2" value="<venda_ohrfnbr>" />
+    <input type="hidden" name="trrfnbr" value="<venda_userinfo><venda_sesid></venda_userinfo>" />
+    <input type="hidden" name="trrfext" value="<venda_block label=115,mode=value,<venda_protocol>=https>1</venda_block label=115>" />
+    <input type="hidden" name="curstep" value="orderlist" />
+    <input type="hidden" name="workflowid" value="<venda_workflow>" />
+    <input type="hidden" name="curlayout" value="1column" />
+    <input type="hidden" name="bsref" value="<venda_bsref>" />
+
+    <tr>
+        <td>
+            Number: <a href="<venda_codehttps>?ex=co_wizr-myaccount&bsref=<venda_bsref>&step=orderdetail&param1=<venda_ohrfnbr>&param2=user&formid=<venda_ohrfnbr>"><venda_ohordnum></a><br>
+            Date: <venda_ohdeldate><br>
+        </td>
+        <td align="left">
+            <ul><venda_order ref=<venda_ohrfnbr>,shopcart=1,template=orderHistoryItemDisplay,formfields=true></ul>
+        </td>
+        <td>
+		<div class="large-13 columns nopad">
+            <venda_block label=10,mode=value,<venda_ohstatus>=On Hold><venda_text id=desktop.info.order_status_in_progress></venda_block label=10>
+            <venda_block label=11,mode=value,<venda_ohstatus>=Released for delivery><venda_text id=desktop.info.order_status_released_for_delivery></venda_block label=11>
+            <venda_block label=12,mode=value,<venda_ohstatus>=Backordered><venda_text id=desktop.info.order_status_backordered></venda_block label=12>
+            <venda_block label=13,mode=value,<venda_ohstatus>=Delivered><venda_text id=desktop.info.order_status_despatched></venda_block label=13>
+            <venda_block label=14,mode=value,<venda_ohstatus>=Returned><venda_text id=desktop.info.order_status_returned></venda_block label=14>
+            <venda_block label=15,mode=value,<venda_ohstatus>=Cancelled><venda_text id=desktop.info.order_status_cancelled></venda_block label=15>
+		</div>
+		<div class="large-11 columns marg-top">
+            <a href="<venda_codehttps>?ex=co_wizr-myaccount&bsref=<venda_bsref>&step=orderdetail&param1=<venda_ohrfnbr>&param2=user&formid=<venda_ohrfnbr>" class="button small">View</a>
+            <venda_block label=1500,mode=value,<venda_setting type=ebiz,name=disablereorderbutton>!=1><input type="submit" value="Re-order" class="button small success marg-top"></venda_block label=1500>
+			</div>
+        </td>
+    </tr>
+    </form>

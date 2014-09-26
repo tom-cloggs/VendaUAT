@@ -1,0 +1,97 @@
+.styleguide {
+  background: url(../images/vendastrap_bg.jpg) no-repeat center top fixed;
+}
+.styleguide .row > nav {
+  width: 100%;
+}
+.styleguide .row nav.columns {
+  padding-top:0;
+  background-color:white;
+}
+.styleguide .nav-bar {
+  margin-top: 0;
+}
+.styleguide .content {
+  margin: 15px;
+}
+.styleguide h1.styleguideheader {
+  text-transform: capitalize;
+}
+.styleguide>div {
+  border-left: 1px solid #525252;
+  border-right: 1px solid #525252;
+  border-bottom: 1px solid #525252;
+  box-shadow: 5px 5px 10px #000;
+}
+.styleguide .wrapper {
+  background-color: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.styleguide h1.styleguideheader {
+    background: url(../images/styleguide_h1.jpg) #FFA267 no-repeat left top;
+    border: 1px solid #B3581A;
+    color: white;
+    padding: 7px 12px 10px;
+    font-weight: normal;
+    display: inline-block;
+}
+.styleguide .mm_ul {
+  margin: 0;
+  background: #000;
+  text-transform: uppercase;
+}
+.nav-styleguidehome {
+  width:7%;
+}
+.nav-forms, .nav-mediaqueries {
+    width: 8%;
+}
+.nav-csscomponents {
+    width: 15%;
+}
+.nav-thegrid, .nav-buttons, .nav-vendamodules, .nav-helpers {
+  width: 9%;
+}
+.nav-typography, .nav-navigation {
+  width: 13%;
+}
+.mm_ul li.nav-active a, .styleguide .mm_ul li a:hover {
+  background-color: #676767;
+}
+
+.styleguide .button-group {
+  margin-bottom: 1.42857em;
+}
+
+/* off canvas top nav */
+[role=navigation]#topMenu {
+  -webkit-transition:.25s all ease-in;
+  -moz-transition:.25s all ease-in;
+  -o-transition:.25s all ease-in;
+  transition:.25s all ease-in;
+}
+
+[role=navigation]#topMenu ul {
+  margin-top:0;
+}
+
+.js-offcanvas-menu [role=navigation]#topMenu {
+  margin-top:0!important;
+}
+
+@media only screen and (max-width:997px) /* up to tablet portrait */
+{
+  .styleguide .wrapper {
+    margin: 0;
+  }
+  .mm_ul {
+    display: block;
+  }
+  .nav-styleguidehome, .nav-forms, .nav-mediaqueries, .nav-csscomponents, .nav-thegrid, .nav-typography, .nav-buttons, .nav-navigation, .nav-vendamodules, .nav-helpers {
+    width: 100%;
+  }
+  .mm_ul li.nav-active a {
+    padding-left: 12px;
+  }
+}

@@ -1,0 +1,1 @@
+<a href="<venda_reset_url>">Reset Password</a>

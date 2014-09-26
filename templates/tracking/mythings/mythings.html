@@ -1,0 +1,62 @@
+<venda_tpcomment>
+<!------------------------------------>
+<!--! Global except order receipt  -->
+<!------------------------------------>
+</venda_tpcomment>
+<venda_block label=notreceipt,mode=value,<venda_tpxt mode=get,name=curstep>!=step5>
+	<script type="text/javascript">
+	function _mt_ready(){
+	   if (typeof(MyThings) != "undefined") {
+	       MyThings.Track({
+	           EventType: MyThings.Event.Visit,
+	               Action: "300"
+	       });
+	   }
+	}
+	var mtHost = (("https:" == document.location.protocol) ? "https" : "http") + "://rainbow-uk.mythings.com";
+	var mtAdvertiserToken = "1166-100-uk";
+	document.write(unescape("%3Cscript src='" + mtHost + "/c.aspx?atok="+mtAdvertiserToken+"' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</venda_block label=notreceipt>
+
+
+<venda_tpcomment>
+<!---------------------->
+<!--! Order receipt  -->
+<!---------------------->
+</venda_tpcomment>
+<venda_block label=receipt,mode=value,<venda_tpxt mode=get,name=curstep>=step5>
+	<script type="text/javascript">
+	function _mt_ready(){
+	   if (typeof(MyThings) != "undefined") {
+	   
+		var mtOrderAray = Venda.Widget.Tracking.orditemsArray;
+		var mtProds 	= [];
+		var mtOrderID 	= Venda.Widget.Tracking.orderJSON.ref;
+		var mtOrderTot 	= Venda.Widget.Tracking.orderJSON.total;
+		
+		$.each(mtOrderAray, function(i, val){
+			if (typeof(val) != "undefined") {
+			
+				var prodID 		= ((val.parref != '') ? val.parref : val.sku) //If product has attributes use parref value otherwise use sku 
+				var prodPrice 	= val.price;
+				var prodQty 	= val.qty;
+			
+				mtProds.push({id: prodID, price: prodPrice, qty: prodQty});
+			}
+		});
+	   	
+		MyThings.Track({
+		   EventType: MyThings.Event.Conversion, 
+		   Action: "9902",
+		   Products: mtProds, 
+		   TransactionReference: mtOrderID,
+		   TransactionAmount: mtOrderTot
+		});
+	  }
+	}
+	var mtHost = (("https:" == document.location.protocol) ? "https" : "http") + "://rainbow-uk.mythings.com";
+	var mtAdvertiserToken = "1166-100-uk";
+	document.write(unescape("%3Cscript src='" + mtHost + "/c.aspx?atok="+mtAdvertiserToken+"' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</venda_block label=receipt>

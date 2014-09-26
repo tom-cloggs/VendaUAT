@@ -1,0 +1,88 @@
+<venda_detblock5>
+<venda_block label=41,oiwizcode=null>
+	<input type="hidden" name="oiord" value="<venda_invtref>">
+	<input type="hidden" name="<venda_cartfield name=deleteline>" value="">
+
+	<venda_block label=115,oiitype=3>
+	<!-- if product is gift certificate -->
+	<input type="hidden" name="<venda_cartfield name=setqty>" id="form<venda_cartfield name=setqty>" value="<venda_oiqty>">
+	<tr class="prod">
+		<td>
+			<div class="large-14 prod-col-one prod-image">
+				<a href="<venda_codehttp>?ex=co_wizr-giftcertificates&bsref=<venda_bsref>" title="Buy another <venda_invtname>">
+					<venda_block label=150,med-rxsmall=notnull><venda_media rec=invt,type=pict,key=rxsmall></venda_block label=150>
+					<venda_block label=151,med-rxsmall=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_xsmall.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=151>
+				</a>
+			</div>
+			<div class="large-10 text-left prod-col-two">
+				<h6 class="prod-name"><a href="<venda_codehttp>?ex=co_wizr-giftcertificates&bsref=<venda_bsref>" title="Buy another <venda_invtname>"><venda_invtname></a></h6>
+				<p>
+					<span><venda_text id=desktop.info.giftcert_sent_to_shopcart></span><br>
+					<span><venda_text id=desktop.info.message>: <venda_oicmt></span>
+				</p>
+				<p class="prod-remove left">
+					<a href="#" class="js-removeItem tiny button secondary" data-trackEvent="Shopping" data-role="button" data-line="<venda_cartfield name=deleteline>" data-wizard="shopcart"><venda_text id=desktop.button.remove></a>
+				</p>
+			</div>
+		</td>
+		<td class="prod-quantity">
+			<div><venda_oiqty></div>
+		</td>
+		<td class="prod-price">
+			<div class="prod-total text-right thinpad-right">
+				<venda_currsym><venda_oiextprice>
+			</div>
+		</td>
+
+	</tr>
+	</venda_block label=115>
+
+	<venda_block label=116,oiitype!=3>
+	<!-- if product is not gift certificate -->
+	<tr class="prod">
+		<td class="text-left">
+			<div class="large-11 prod-col-one">
+				<a href="<venda_block label=20,invtatt1=notnull><venda_dispview invt=<venda_invtparef>></venda_block label=20><venda_block label=30,invtatt1=null><venda_dispview invt=<venda_invtref>></venda_block label=30>">
+					<venda_block label=31,med-rxsmall=notnull><venda_media rec=invt,type=movie-swf-pict,key=rxsmall></venda_block label=31>
+					<venda_block label=32,med-rxsmall=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_xsmall.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=32>
+				</a>
+			</div>
+			<div class="large-13 text-left prod-col-two">
+				<venda_block label=113,invtatt1=null>
+					<h6 class="prod-name"><a href="<venda_dispview invt=<venda_invtref>>"><venda_invtname></a></h6>
+				</venda_block label=113>
+				<venda_block label=111,invtatt1=notnull>
+					<h6 class="prod-name"><a href="<venda_dispview invt=<venda_invtparef>>"><venda_invtname></a></h6>
+				</venda_block label=111>
+				<venda_extflds exfldtype=orderitem,group=1,template=oixtDisplay,type=exfields/orderItem,ref=<venda_invtref>,displayonly=1><venda_extflds exfldtype=orderitem,group=2,template=oixtDisplay,type=exfields/orderItem,ref=<venda_invtref>,displayonly=1>
+				<venda_block label=456,invtatt1=notnull>
+				<div><strong><venda_text id=desktop.info.att1_label>:</strong> <venda_invtatt1></div></venda_block label=456>
+								<venda_block label=457,invtatt2=notnull>
+				<!--div><strong><venda_invtatrlbl2 >:</strong> <venda_invtatt 2></div--></venda_block label=457>
+				<venda_block label=458,invtatt3=notnull>
+				<!--div><strong><venda_invtatrlbl3 >:</strong> <venda_invtatt3 ></div--></venda_block label=458>
+				<venda_block label=459,invtatt4=notnull>
+				<!--div><strong><venda_invtatrlbl4 >:</strong> <venda_invtatt4 ></div--></venda_block label=459>
+
+				<venda_extflds exfldtype=orderitem,group=1,template=oixtDisplay,type=exfields/orderItem,ref=<venda_invtref>,displayonly=1><venda_extflds exfldtype=orderitem,group=2,template=oixtDisplay,type=exfields/orderItem,ref=<venda_invtref>,displayonly=1>
+				<p class="prod-remove left">
+				    <a href="#" class="js-removeItem secondary tiny button" data-trackEvent="Shopping" data-role="button" data-line="<venda_cartfield name=deleteline>" data-wizard="shopcart"><venda_text id=desktop.button.remove></a>
+				</p>
+			</div>
+		</td>
+		<td class="prod-quantity text-left">
+			<div class="left">
+				<input type="text" name="<venda_cartfield name=setqty>" id="form<venda_cartfield name=setqty>" size="2" maxlength="3" value="<venda_oiqty>" class="js-qty" onkeypress="if(event.keyCode==13){jQuery('#update<venda_cartfield name=setqty>').click(); return false;}">
+				<a id="update<venda_cartfield name=setqty>" href="#" onclick="document.<venda_curstep>form.wizard.value='<venda_workflow>';document.<venda_curstep>form.step.value='<venda_curstep>'; jQuery('form[name=<venda_curstep>form] input[type=submit]').click();return false;" title="<venda_text id=desktop.button.update> <venda_invtname>" class="tiny success button"><venda_text id=desktop.button.update></a>
+			</div>
+		</td>
+		<td class="prod-price">
+			<div class="prod-total text-right thinpad-right">
+				<venda_currsym><venda_oiextprice>
+			</div>
+		</td>
+
+	</tr>
+	</venda_block label=116>
+</venda_block label=41>
+</venda_detblock5>

@@ -1,0 +1,22 @@
+<div class="mm_bg">
+<h5 class="nav-header hide-for-desktop-up" id="nav-header"><i class="icon-reorder icon-small"></i> <venda_text id=desktop.heading.browse></h5>
+<venda_tpcomment><!-- Dynamic Top Navigation --><!--venda_category rec=icat,ref=shop,temp=dynamicTopNavigation,itemsperpage=100--></venda_tpcomment>
+<venda_tpcomment><!-- Static Top Navigation --></venda_tpcomment><venda_page page=mainmenu>
+</div>
+
+<venda_block label=980,workflow!=shopcart>
+<venda_block label=113,icatref!=shoes_sale>
+<div class="crumb small-24 columns">
+    <p class="crumbtrail hide-for-small">
+        <a href="<venda_ebizurl>" class="crumbtrail-home"><venda_text id=desktop.button.home></a>
+        <venda_cattree class=crumbtrail-anchor,sep=<span>&#47</span>,append=<span class="prod-name"><venda_tpxt mode=get,name=recordname></span>>
+    </p>
+</div>
+</venda_block label=113>
+</venda_block label=980>
+
+<div id="tags_cattree" style="display: none">
+<venda_cattree index=1, value=catref>,
+<venda_cattree index=2, value=catref>,
+<venda_cattree index=3, value=catref>
+</div>

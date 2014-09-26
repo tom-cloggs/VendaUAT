@@ -1,0 +1,30 @@
+<div class="instoreHeader large-24 columns">
+	
+	<ul class="instoreStepIndicators">
+		<li class="backtohome"><a href="<venda_dispview page=home>" class="js-showconfirm"><i class="icon-angle-left"></i>Home</a></li>	
+		<li class="instoreStep<venda_block label=124,mode=value,<venda_tpxt mode=get,name=curstep>=step1> instoreStep-active</venda_block label=124>"><venda_text id=desktop.info.step_customer></li>
+		<li class="instoreStep<venda_block label=125,mode=value,<venda_tpxt mode=get,name=curstep>=step2> instoreStep-active</venda_block label=125>"><venda_text id=desktop.info.step_dellivery></li>
+		<li class="instoreStep<venda_block label=126,mode=value,<venda_tpxt mode=get,name=curstep>=step3> instoreStep-active</venda_block label=126>"><venda_text id=desktop.info.step_summary></li>
+		<li class="instoreStep<venda_block label=127,mode=value,<venda_tpxt mode=get,name=curstep>=step4> instoreStep-active</venda_block label=127>"><venda_text id=desktop.info.step_payment></li>
+		<li class="basket"><venda_block label=31,mode=value,<venda_tpxt mode=get,name=curstep>=step1><a href="<venda_codehttp>?ex=co_wizr-shopcart&bsref=<venda_bsref>&log=22"><i class="icon-shopping-cart icon-large"></i></a></venda_block label=31></li>	
+	</ul>
+
+
+	<div class="row  thickpad-topbottom">
+	<div class="columns large-12 small-12"><venda_block label=111,pageref!=home><a href="<venda_dispview page=home>" class="js-showconfirm" title="<venda_ebizname>"></venda_block label=111><img id="logo" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/logo.png" width="189" alt="<venda_ebizname>"><venda_block label=112,pageref!=home></a></venda_block label=112></div>
+
+	<div id="pcilogo" class="columns large-12 small-12 text-right">
+		<a href="http://www.venda.com/pci-compliance-certificate?referer=<venda_serveradd>" rel="popup console 590 660" target="_blank" title="<venda_text id=pcilogotitle>">
+		<img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/pcilogo.png" alt="<venda_text id=pcilogoalt>" height="63" width="96" /></a>
+	</div>
+	</div>
+</div>
+
+<div id="confirmModal" class="reveal-modal  medium">
+<div class="row">
+<p><venda_text id=desktop.info.leave_instore_checkout></p>
+<div class="large-12 columns"><a href="<venda_dispview page=home>" class="button secondary expand"><venda_text id=desktop.button.yes></a></div>
+<div class="large-12 columns">	<a href="#" class="button secondary expand" id="no"><venda_text id=desktop.button.no></a></div>
+</div>
+<a class="close-reveal-modal">x</a>
+</div>

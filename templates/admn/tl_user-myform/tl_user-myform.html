@@ -1,0 +1,94 @@
+<div id="tlusermyform" class="pad-side">
+
+	<form name="form" action="<venda_codehttps>" method="post" class="js-custom">
+	<input type="hidden" name="ex" value="tl_user-procmyform">
+	<input type="hidden" name="layout" value="myaccount">
+	<input type="hidden" name="bsref" value="<venda_bsref>">
+	<input type="hidden" name="blkpostprev" value="<venda_blkpost>">
+	<input type="hidden" name="blksmsprev" value="<venda_blksms>">
+	<input type="hidden" name="blkemailprev" value="<venda_blkemail>">
+	<input type="hidden" name="blktrdcommprev" value="<venda_blktrdcomm>">
+	<input type="hidden" name="PrimaryForm">
+
+	<venda_tpcomment><!-- Start: Change Email Address and Password --></venda_tpcomment>
+		<venda_block label=100,mode=value,<venda_htxt mode=get,name=pass>=change>
+		<venda_inctemplate type=admn/tl_user-myform,name=emailaddresspassword>
+		</venda_block label=100>
+	<venda_tpcomment><!-- End: Change Email Address and Password --></venda_tpcomment>
+
+	<venda_tpcomment><!-- Start: Edit User Details (Address) --></venda_tpcomment>
+		<venda_block label=101,mode=value,<venda_htxt mode=get,name=addr>=change>
+		<div class="js-editaddressform"><venda_inctemplate type=admn/tl_user-myform,name=billingaddress></div>
+		</venda_block label=101>
+	<venda_tpcomment><!-- End: Edit User Details (Address) --></venda_tpcomment>
+
+	<venda_tpcomment><!-- Start: Change Communication Options --></venda_tpcomment>
+		<venda_block label=102,mode=value,<venda_htxt mode=get,name=comm>=change>
+		<venda_inctemplate type=admn/tl_user-myform,name=communicationoptions>
+		</venda_block label=102>
+	<venda_tpcomment><!-- End: Change Communication Options --></venda_tpcomment>
+
+	<venda_tpcomment><!-- Start: Store credit information --></venda_tpcomment>
+		<venda_block label=103,param1=storecredit>
+		<venda_inctemplate type=admn/tl_user-myform,name=storecredit>
+		</venda_block label=103>
+	<venda_tpcomment><!-- End: Store credit information --></venda_tpcomment>
+
+	<venda_block label=11,param1=profile>
+		<input type="hidden" name="page" value="myaccount">
+		<input type="hidden" name="blkpost" value="<venda_blkpost>">
+		<input type="hidden" name="blkemail" value="<venda_blkemail>">
+		<input type="hidden" name="blksms" value="<venda_blksms>">
+		<input type="hidden" name="blktrdcomm" value="<venda_blktrdcomm>">
+		<input type="hidden" name="usmailform" value="<venda_usmailform>">
+		<input type="hidden" name="title" value="<venda_title>">
+		<input type="hidden" name="fname" value="<venda_fname>">
+		<input type="hidden" name="mname" value="<venda_mname>">
+		<input type="hidden" name="lname" value="<venda_lname>">
+		<input type="hidden" name="zipc" value="<venda_zipc>">
+
+		<h1>Change Profile</h1>
+
+		<fieldset>
+		<div class="row">
+			<div class="large-6 columns">
+				<label for="usxtgender" class="inline right hide-for-small"><venda_text id=desktop.form.usxtexample2></label>
+			</div>
+			<div class="large-18 columns">
+				<select name="usxtgender" id="usxtgender"><venda_usxselectusxtgender></select>
+			</div>
+		</div>
+		</fieldset>
+		<div id="buttons" class="row thickpad-bottom">
+		<div class="large-12 columns right text-right marg-bottom"><input type="submit" value="<venda_text id=desktop.button.save_changes>" class="button"></div>
+		<div class="large-12 columns "><a href="<venda_codehttps>?ex=co_wizr-myaccount&bsref=<venda_bsref>" class="button secondary"><venda_text id=desktop.button.my_account></a></div>
+		</div>
+		</form>
+
+	</venda_block label=11>
+
+	</form>
+</div>
+
+<venda_tpcomment><!-- trackingstep tpxt used in templates/tracking/shared  --></venda_tpcomment>
+<venda_tpxt mode=set,name=trackingstep,value=myaccount/user-myform>
+
+<venda_inctemplate name=workflowSteps,type=tracking/shared>
+
+<venda_tpcomment><!-- Used for html title --></venda_tpcomment>
+<venda_tpxt mode=set,name=title,value=<venda_text id=desktop.heading.myaccount>>
+
+
+	<!-- Localisation to be passed to JS -->
+	<div id="user_details_label_us_state" style="display: none;"><venda_text id=desktop.form.state_us></div>
+	<div id="user_details_label_us_zip" style="display: none;"><venda_text id=desktop.form.zipc_us></div>
+	<div id="user_details_label_uk_county" style="display: none;"><venda_text id=desktop.form.state></div>
+	<div id="user_details_label_non_us_postcode" style="display: none;"><venda_text id=desktop.form.zipc></div>
+	<div id="user_details_label_non_us_uk_region" style="display: none;"><venda_text id=desktop.form.region></div>
+	<div id="please_select_multi_dot" style="display: none;"><venda_text id=desktop.form.please_select_multi_dot></div>
+
+
+
+
+
+

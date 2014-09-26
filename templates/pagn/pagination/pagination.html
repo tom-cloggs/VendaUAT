@@ -1,0 +1,136 @@
+<venda_detblock_pageslist>
+	<venda_block label=1111,mode=value,<venda_currentpage>=<venda_number>>
+		<li class="current"><a class="page-button"><venda_number></a></li>
+	</venda_block label=1111>
+	<venda_block label=1112,mode=value,<venda_currentpage>!=<venda_number>>
+		<li><a href="<venda_baseurl>&setpagenum=<venda_number><venda_block label=1128,mode=value,<venda_pgn_isviewall>=1>&isviewall=1</venda_block label=1128>&perpage=<venda_perpage>" class="page-button js-updatesearch" title="<venda_text id=desktop.info.pagn_go_to_page_y>"><venda_number></a></li>
+	</venda_block label=1112>
+</venda_detblock_pageslist>
+
+
+
+<div class="small-12 large-8 columns right">
+        <venda_block label=1120,mode=value,<venda_pgn_isviewall>=1>
+            <!-- show paged view -->
+            <span class="pagn-show-view-by-page<venda_block label=1136,mode=value,<venda_pgn_totalpages>=1> setMarginPagedView</venda_block label=1136>"><a class="js-updatesearch" href="<venda_pgn_baseurl>&setpagenum=1&perpage=<venda_setting type=ebiz,name=setsearchviewbypagevalue>" title="<venda_text id=desktop.info.pagn_page_go_viewbypage>"><venda_text id=desktop.button.viewbypage></a></span>
+        </venda_block label=1120>
+        <venda_block label=1119,mode=value,<venda_pgn_isviewall>!=1>
+
+                    <div class="js-pagnPerpage">
+                        <form>
+                            <div class="row collapse">
+                                <div class="large-13 columns text-right hide-for-small"><label for="perpagedpd" class="inline"><span class="pagn-text-view"><venda_text id=desktop.form.view>:</span></label></div>
+                                <div class="large-10 small-21 columns js-custom thinmarg-right">
+                                    <select name="perpagedpd" id="perpagedpd">
+                                    <option> - </option>
+                                    <option value="<venda_pgn_baseurl>&setpagenum=1&perpage=20" <venda_block label=71,mode=value,<venda_pgn_perpage>=20> selected</venda_block label=71>> 20 </option>
+                                    <option value="<venda_pgn_baseurl>&setpagenum=1&perpage=40" <venda_block label=72,mode=value,<venda_pgn_perpage>=40> selected</venda_block label=72>> 40 </option>
+                                    <option value="<venda_pgn_baseurl>&setpagenum=1&perpage=60" <venda_block label=73,mode=value,<venda_pgn_perpage>=60> selected</venda_block label=73>> 60 </option>
+                                    <option value="<venda_pgn_baseurl>&setpagenum=1&perpage=80" <venda_block label=74,mode=value,<venda_pgn_perpage>=80> selected</venda_block label=74>> 80 </option>
+                                    <option value="<venda_pgn_baseurl>&setpagenum=1&perpage=100" <venda_block label=75,mode=value,<venda_pgn_perpage>=100> selected</venda_block label=75>> 100 </option>
+                                    </select>
+                                </div>
+                           </div>
+                        </form>
+                    </div>
+
+        </venda_block label=1119>
+</div>
+
+    <venda_block label=1139,mode=value,<venda_setting type=ebiz,name=viewpagedisplaysearch>=1>
+       <div class="large-7 columns end text-center"> <div class="pagn-page-info<venda_block label=1140,mode=value,<venda_setting type=ebiz,name=alwaysshowpagenumsearch>!=1,<venda_pgn_totalpages>=1> pagn-always-show-page-num</venda_block label=1140>"><venda_text id=desktop.info.pagn_page_x_of_y></div></div>
+    </venda_block label=1139>
+    <venda_block label=1121,mode=value,<venda_setting type=ebiz,name=viewitemsdisplaysearch>=1>
+       <div class="large-7 columns end text-center"> <p class="pagn-item-info pad-top"><venda_text id=desktop.info.pagn_items_x_of_y></p></div>
+    </venda_block label=1121>
+
+
+
+<div class="large-24 small-24 columns">
+<div class="row collapse">
+    <venda_block label=4,mode=value,<venda_pgn_totalpages>&gt;1>
+	<div class="small-8 large-5 columns pagn-prev-col">
+		<div class="box box-pagn radius-left">
+			<div class="box-body">
+				<!-- show the previous link-->
+				<venda_block label=1117,mode=value,<venda_pgn_currentpage>&gt;1>
+					<p class="pagn-prev"><a class="js-updatesearch" href="<venda_pgn_baseurl>&setpagenum=<venda_pgn_previouspage><venda_block label=1129,mode=value,<venda_pgn_isviewall>=1>&isviewall=1</venda_block label=1129>&perpage=<venda_pgn_perpage>" title="<venda_text id=desktop.info.pagn_page_go_previous>"><i class="icon-caret-left icon-small"></i> <venda_text id=desktop.button.pagn_page_previous></a></p>
+				</venda_block label=1117>
+				<venda_block label=11171,mode=value,<venda_pgn_currentpage>=1>
+					<p class="pagn-prev unavailable"><i class="icon-caret-left icon-small"></i> <venda_text id=desktop.button.pagn_page_previous></p>
+				</venda_block label=11171>
+			</div>
+		</div>
+	</div>
+	<div class="hide-for-small large-14 hide-for-small columns nopad">
+		<div class="box box-pagn">
+			<div class="box-body">
+				<ul class="pagn-pages">
+						<!-- show the first page link-->
+						<venda_block label=1115,mode=value,<venda_pgn_windowstartpage>&gt;1>
+							<li><a class="page-button js-updatesearch" href="<venda_pgn_baseurl>&setpagenum=1<venda_block label=1130,mode=value,<venda_pgn_isviewall>=1>&isviewall=1</venda_block label=1130>&perpage=<venda_pgn_perpage>" title="<venda_text id=desktop.info.pagn_page_go_first>">1</a></li>
+						</venda_block label=1115>
+
+						<venda_block label=1113,mode=value,<venda_pgn_leftgap>&gt;1>
+							<!-- show the left ... -->
+							<li><venda_text id=desktop.info.ellipsis></li>
+						</venda_block label=1113>
+
+						<venda_detail_pageslist pgn_window_size=2>
+
+						<venda_block label=1114,mode=value,<venda_pgn_rightgap>&gt;1>
+							<!-- show the right ... -->
+							<li><venda_text id=desktop.info.ellipsis></li>
+						</venda_block label=1114>
+
+						<!-- show the last link -->
+						<venda_block label=1118,mode=value,<venda_pgn_windowendpage>&lt;<venda_pgn_totalpages>>
+							<li><a class="page-button js-updatesearch" href="<venda_pgn_baseurl>&setpagenum=<venda_pgn_totalpages><venda_block label=1131,mode=value,<venda_pgn_isviewall>=1>&isviewall=1</venda_block label=1131>&perpage=<venda_pgn_perpage>" title="<venda_text id=desktop.info.pagn_page_go_last>"><venda_pgn_totalpages></a></li>
+						</venda_block label=1118>
+
+						<venda_block label=999,mode=value,<venda_pgn_isviewall>!=1>
+							<venda_block label=1122,mode=value,<venda_setting type=ebiz,name=showsearchviewall>=1,<venda_pgn_totalpages>&gt;1>
+								<venda_tpcomment><!-- show 'view all' link --></venda_tpcomment>
+								<li>
+									<venda_block label=1125,mode=value,<venda_setting type=ebiz,name=setsearchviewallvalue>=notnull>
+										<venda_block label=1123,mode=value,<venda_pgn_totalitems>&lt;<venda_setting type=ebiz,name=setsearchviewallvalue>,<venda_pgn_totalitems>=<venda_setting type=ebiz,name=setsearchviewallvalue>,operator=or>
+											<a class="js-updatesearch" href="<venda_pgn_baseurl>&setpagenum=1&isviewall=1&perpage=<venda_pgn_totalitems>" title="<venda_text id=desktop.button.viewall>"><venda_text id=desktop.button.viewall></a>
+										</venda_block label=1123>
+										<venda_block label=1124,mode=value,<venda_pgn_totalitems>&gt;<venda_setting type=ebiz,name=setsearchviewallvalue>>
+											<a class="js-updatesearch" href="<venda_pgn_baseurl>&setpagenum=1&isviewall=1&perpage=<venda_setting type=ebiz,name=setsearchviewallvalue>" title="<venda_text id=desktop.button.viewallmax>"><venda_text id=desktop.button.viewallmax></a>
+										</venda_block label=1124>
+									</venda_block label=1125>
+								</li>
+							</venda_block label=1122>
+						</venda_block label=999>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="small-6 large-5 columns pagn-next-col">
+		<div class="box box-pagn radius-right">
+			<div class="box-body">
+				<!--show the next page -->
+				<venda_block label=1116,mode=value,<venda_pgn_currentpage>&lt;<venda_pgn_totalpages>>
+					<p class="pagn-next"><a class="js-updatesearch" href="<venda_pgn_baseurl>&setpagenum=<venda_pgn_nextpage><venda_block label=1132,mode=value,<venda_pgn_isviewall>=1>&isviewall=1</venda_block label=1132>&perpage=<venda_pgn_perpage>" title="<venda_text id=desktop.info.pagn_page_go_next>"><venda_text id=desktop.button.pagn_page_next> <i class="icon-caret-right icon-small"></i></a></p>
+				</venda_block label=1116>
+				<venda_block label=11161,mode=value,<venda_pgn_currentpage>=<venda_pgn_totalpages>>
+					<p  class="pagn-next unavailable"><venda_text id=desktop.button.pagn_page_next> <i class="icon-caret-right icon-small"></i></p>
+				</venda_block label=11161>
+			</div>
+		</div>
+	</div>
+    </venda_block label=4>
+    <venda_block label=5,mode=value,<venda_pgn_totalpages>=1>
+    <div class="small-19 columns"></div>
+    </venda_block label=5>
+</div>
+</div>
+<venda_tpcomment><!-- the following glxt is needed for Recent Search History, please do not remove --></venda_tpcomment>
+<!-- <venda_glxt mode=set,name=currentpage,value=<venda_pgn_currentpage>> -->
+<venda_tpcomment><!-- the following tpxt is needed for Search Results page, please do not remove --></venda_tpcomment>
+<venda_block label=6,pgn_totalpages=1,pgn_currentpage=1,operator=or><venda_tpxt mode=set,name=currentpage,value=1></venda_block label=6>
+<!--
+	windowstartpage - <venda_pgn_windowstartpage>
+	windowendpage   - <venda_pgn_windowendpage>
+-->

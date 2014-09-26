@@ -1,0 +1,129 @@
+<venda_tpcomment><!-- tag values used for minicart update without reload --></venda_tpcomment>
+<div id="tag-addedmsgref" style="display:none;"><venda_addedmsg msg=addedref></div>
+<div id="tag-bsref" style="display:none;"><venda_bsref></div>
+<div id="tag-addedmsg" style="display:none;"><venda_block label=32,mode=value,<venda_addedmsg msg=addedref>=notnull><venda_addedmsg msg=addedref></venda_block label=32></div>
+<div id="tag-codehttp" style="display:none;"><venda_block label=33,mode=value,<venda_protocol>=http><venda_codehttp></venda_block label=33><venda_block label=34,mode=value,<venda_protocol>=https><venda_codehttps></venda_block label=34></div>
+<div id="tag-headertext" style="display:none;"><span><venda_text id=desktop.heading.your_cart></span></div>
+
+<venda_tpcomment><!-- shown for tablet portrait and larger --></venda_tpcomment>
+<div class="row header-row-one show-for-tablet-portrait-up">
+    <div class="large-8 columns user-login">
+        <ul class="userlinks">
+            <li class="welcome">
+                <venda_block label=1,ustype=R><venda_userinfo><span><venda_text id=desktop.info.welcome_back> <venda_sesfname> <venda_seslname></span></venda_userinfo></venda_block label=1><venda_block label=2,ustype!=R><span><venda_text id=desktop.info.welcome_to> <venda_setting type=ebiz,name=name></span></venda_block label=2>
+            </li>
+            <venda_block label=20,ustype=R>
+                <li><venda_block label=300,mode=value,<venda_setting type=ebiz,name=skipsecondlogin>=1><a href="<venda_codehttps>?ex=co_wizr-myaccount&bsref=<venda_bsref>"></venda_block label=300><venda_block label=301,mode=value,<venda_setting type=ebiz,name=skipsecondlogin>!=1><a href="<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref>"></venda_block label=301><i class="ico-header_myaccount"></i><span>My Home</span></a></li>
+                <li><a href="<venda_dispview page=home>&log=4"><i class="ico-header_logout"></i><span>Logout</span></a></li>
+            </venda_block label=20>
+            <venda_block label=21,ustype!=R>
+                <li><a href="<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref>"><i class="ico-header_myaccount"></i><span>My Account</span></a></li>
+            </venda_block label=21>
+        </ul>
+    </div>
+    <div class="large-8 columns">
+    <venda_tpcomment><!--7pm delivery message !--></venda_tpcomment>
+    <venda_page page=headerdelivery>
+    </div>
+    <div class="large-8 columns">
+        <div class="row" id="basketSection">
+            <venda_minicart template=itemsTotal>
+            <div id="minicartDetailWrapper" class="minicartDetailWrapper"></div>
+        </div>
+    </div>
+</div>
+
+<venda_tpcomment><!-- shown for mobile/small only --></venda_tpcomment>
+<div class="header-row-one js-header-row-one show-for-small" id="header-row-one">
+    <div class="row pad-side">
+        <div class="small-6 columns nopad"><a href="#js-canvas-content-left" id="js-canvas-left" class="js-canvas-left"><i class="icon-info"></i></a></div>
+        <div class="small-10 columns nopad">
+		<venda_block label=smallcloggslogo,icxtlittlecloggslogo!=1,pdxtlittlecloggslogo!=1>
+				<div class="logo">
+				<venda_block label=nothome,pageref!=home><a href="/"><img id="logo" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/cloggs-notext.png" alt="<venda_ebizname>"></a>
+					</venda_block label=nothome>
+					
+					<venda_block label=home,pageref=home>
+					<h1><img id="logo" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/cloggs-notext.png" alt="<venda_ebizname>"></h1>
+				</venda_block label=home>
+			</div>	
+		</venda_block label=smallcloggslogo>
+		
+		<venda_block label=smalllittlecloggslogo,icxtlittlecloggslogo=1,pdxtlittlecloggslogo=1,operator=or>
+			  <div class="logo littlecloggslogo">
+				<venda_block label=nothome,pageref!=home><a href="<venda_dispview page=home>"><img id="logo" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/little-cloggs-black.png" alt="<venda_ebizname>"></a>
+					</venda_block label=nothome>
+					
+					<venda_block label=home,pageref=home>
+					<h1>	<img id="logo" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/little-cloggs-black.png" alt="<venda_ebizname>"></h1>
+				</venda_block label=home>
+			</div>	
+		</venda_block label=smalllittlecloggslogo>	
+        </div>
+		
+        <div class="small-8 columns nopad text-right">
+            <div>
+                <a href="#" class="js-togglebox" data-toggle="js-togglebox-search"><i class="icon-search"></i></a>
+                <i class="icon-basket" style="font-size: 2.8em"></i><a href="#js-canvas-content-right" id="js-canvas-right" class="js-canvas-right"><venda_minicart template=itemsTotalMini></a>
+            </div>
+        </div>
+     </div>
+</div>
+
+<div class="header-row-two" id="header-row-two">
+    <div class="row">
+	<venda_block label=cloggslogo,icxtlittlecloggslogo!=1,pdxtlittlecloggslogo!=1>
+        <div class="large-7 columns logo hide-for-small nopad">
+            <venda_block label=nothome,pageref!=home><a href="/"><img id="logo" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/logo-white.png" alt="<venda_ebizname>"></a>
+                </venda_block label=nothome>
+				
+                <venda_block label=home,pageref=home>
+                <h1>	<img id="logo" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/logo-white.png" alt="<venda_ebizname>"></h1>
+			</venda_block label=home>
+        </div>	
+	</venda_block label=cloggslogo>
+	
+	<venda_block label=littlecloggslogo,icxtlittlecloggslogo=1,pdxtlittlecloggslogo=1,operator=or>
+        <div class="large-7 columns logo hide-for-small nopad">
+            <venda_block label=nothome,pageref!=home><a href="/"><img id="logo" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/little-cloggs-white.png" alt="<venda_ebizname>"></a>
+                </venda_block label=nothome>
+				
+                <venda_block label=home,pageref=home>
+                <h1>	<img id="logo" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/little-cloggs-black.png" alt="<venda_ebizname>"></h1>
+			</venda_block label=home>
+        </div>		
+	</venda_block label=littlecloggslogo>	
+        <div class="large-16 columns nopad hide-for-small js-togglebox-search">
+
+            <div class="row">
+
+            <div class="large-14 columns">
+
+          <div class="searchform">
+            <h5 class="search-header hide">Search</h5>
+            <form id="formsolrsearch" name="formsolrsearch" action="/search">
+                <div class="row collapse">
+                    <div class="large-22 columns">
+                    <label class="hidescreenreadersafe" for="q">Keyword:</label>
+                    <input type="search" size="20" id="q" name="q" placeholder="Search your Home of Footwear" class="search-input">
+                    </div>
+                    <div class="large-2 small-24 columns">
+                    <input type="submit" class="headersearch-btn hide-for-small" value="" id="searchsubmit">  
+                    <input type="submit" class="button success show-for-small" value="Search" id="searchsubmit">  
+                    </div>   
+                </div>
+           </form>
+            </div>
+
+           </div>
+
+            <div class="large-8 columns show-for-medium-up">
+            <p><a href="/pcat/cloggs_helpdesk" rel="nofollow"><img class="helpdesk" src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/helpdesk.png" style="vertical-align: -70px;"></a></p>
+            </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

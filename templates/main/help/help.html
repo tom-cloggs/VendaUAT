@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="<venda_block label=10,mode=value,<venda_sessionlanguage>=ae>en-US</venda_block label=10><venda_block label=11,mode=value,<venda_sessionlanguage>!=ae><venda_sessionlanguage></venda_block label=11>" class="no-js ie6 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="<venda_block label=20,mode=value,<venda_sessionlanguage>=ae>en-US</venda_block label=20><venda_block label=21,mode=value,<venda_sessionlanguage>!=ae><venda_sessionlanguage></venda_block label=21>" class="no-js ie7 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="<venda_block label=30,mode=value,<venda_sessionlanguage>=ae>en-US</venda_block label=30><venda_block label=31,mode=value,<venda_sessionlanguage>!=ae><venda_sessionlanguage></venda_block label=31>" class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="<venda_block label=40,mode=value,<venda_sessionlanguage>=ae>en-US</venda_block label=40><venda_block label=41,mode=value,<venda_sessionlanguage>!=ae><venda_sessionlanguage></venda_block label=41>" class="no-js"> <!--<![endif]-->
+<!--[if gte IE 9]><style type="text/css">.gradient {filter: none;}</style><![endif]-->
+<head>
+<venda_inctemplate name=metatags,type=mainIncludes>
+<venda_inctemplate name=title,type=mainIncludes>
+
+<venda_inctemplate name=jsHead,type=mainIncludes>
+
+<venda_inctemplate name=css,type=mainIncludes>
+<venda_inctemplate name=hitboxOthers,type=includes/tracking>
+</head>
+<body id="<venda_rtype>_<venda_ref>">
+<venda_inctemplate name=admin,type=mainIncludes>
+<venda_inctemplate name=nojavascript,type=mainIncludes>
+<venda_inctemplate name=demo,type=mainIncludes>
+<div class="outer-wrapper">
+<div class="wrapper">
+    <a href="#skiptocontent" class="skiptocontent"><venda_text id=desktop.button.skip_to_content></a>
+
+    <div class="layout-help">
+        <div id="header" role="banner">
+            <venda_inctemplate name=header,type=mainIncludes>
+        </div><!-- end header -->
+
+        <nav class="nav row collapse" id="nav" role="navigation">
+            <venda_inctemplate name=topNavigation,type=mainIncludes>
+        </nav><!-- end top navigation -->
+
+        <div class="row row-main">
+            <div class="large-6 columns helpNavigation-box js-main-2column">
+                <div id="box-helpNavigation" class="box box-section marg-top show-for-small">
+                    <div class="box-header text-center">
+                        <h3 class="js-togglebox" data-toggle="js-helpNavigation" data-toggle-icon="icon-minus">Browse <i class="icon-plus icon-small"></i></h3>
+                    </div>
+                </div>
+                <div id="helpNavigation" class="hide-for-small js-helpNavigation">
+                    <venda_category rec=pcat,ref=cloggs_helpdesk,temp=helpNavigation,itemsperpage=100>
+                </div>
+            </div><!-- end help nav -->
+
+            <section id="content" role="main" class="large-18 columns right js-main-2column">
+                <a name="skiptocontent" id="skiptocontent"></a>
+                <venda_content>
+            </section><!-- end content section -->
+        </div>
+
+        <footer id="footer" role="contentinfo" class="row">
+            <venda_inctemplate name=footer,type=mainIncludes>
+        </footer><!-- end footer -->
+    </div><!-- end layout-help -->
+
+    <div class="offCanvasLeftMenu show-for-small">
+        <div class="block"><venda_inctemplate name=offCanvasLeftMenu,type=mainIncludes></div>
+    </div><!-- end off canvas left menu -->
+
+    <div class="offCanvasRightMenu show-for-small">
+        <div class="block"><venda_inctemplate name=offCanvasRightMenu,type=mainIncludes></div>
+    </div><!-- end off canvas right menu -->
+</div><!-- end wrapper -->
+</div><!-- end outer-wrapper -->
+
+<!-- validation defs -->
+<venda_inctemplate name=validation,type=includes>
+<venda_inctemplate name=js,type=mainIncludes>
+
+<venda_inctemplate name=bodyBottom,type=tracking/shared>
+</body>
+</html>

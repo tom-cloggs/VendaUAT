@@ -1,0 +1,35 @@
+<venda_detblock>
+<li>
+    <div class="thinmarg">
+    <a href="<venda_dispview icat=<venda_icatref1>>">
+    <venda_block label=10,med-rmain1=notnull><venda_media rec=icat1,type=movie-swf-pict,key=rmain,border=0><span class="catlistname"><venda_icatname1></span></venda_block label=10>
+    <venda_block label=111,med-rmain1=null><div class="subcategorylist text-center"><span><venda_icatname1></span></div></venda_block label=111>
+    </a>
+</div>
+</li>
+</venda_detblock>
+<venda_block errors=notnull><h2 class="alert-box alert radius" data-alert=""><venda_errors></h2></venda_block>
+<div class="main-header text-center"><h1><venda_icatname></h1></div>
+<venda_block label=isdescription,icxtdisabledescription=>
+    <venda_block label=desc,med-catimage=notnull,icatldesc=notnull,operator=or>
+    <div class="box icat_icatldesc hide-for-small"><div class="box-body nopad">
+    <venda_block label=4,med-catimage=notnull>
+        <div class="row nomarg"><div class="large-12 columns thickpad"><venda_icatldesc></div><div class="large-12 columns" style="background:url(<venda_media rec=icat,type=movie-swf-pict,key=catimage,img=no>) no-repeat right;background-size: 100% auto;padding-bottom: 27%;"></div></div>
+    </venda_block label=4>
+    <venda_block label=5,med-catimage=null><div class="thickpad"><venda_icatldesc></div></venda_block label=5>
+    </div></div>
+    </venda_block label=desc>
+</venda_block label=isdescription>
+<venda_page page=<venda_icxtcategoryheader>>
+
+<ul id="categorylist" class="categorylist large-block-grid-4 small-block-grid-2">
+<venda_detail>
+</ul>
+
+<venda_block label=brand,icatref=brands_directory><venda_category temp=featprods,ref=brdf,rec=icat></venda_block label=brand>
+<venda_block label=notbrand,icatref!=brands_directory><venda_inctemplate name=catfeatslider,type=widgets></venda_block label=notbrand>
+
+<venda_tpxt mode=set,name=track,value=categorylist>
+
+<!-- tpxt used for showing the bestseller products based on current category -->
+<venda_tpxt mode=set,name=categorySearch,value=<venda_icatref>>

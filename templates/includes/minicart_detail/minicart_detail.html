@@ -1,0 +1,15 @@
+<div id="box-basket" class="hide-for-small box">
+<h6 class="box-header"><venda_text id=desktop.heading.item_your_order></h6>
+<div class="box-body minicartDetailCheckout">
+	<venda_block label=52,mode=value,<venda_shopcart mode=getqty>!=0><venda_order shopcart=1,template=minicart_detail_checkout></venda_block label=52>
+	<venda_block label=53,mode=value,<venda_shopcart mode=getqty>=0><p><venda_text id=desktop.info.shopping_cart_empty></p></venda_block label=53>
+
+	<venda_minicart template=minicartItemsTotal>
+
+	<venda_block label=101,workflow!=instore>
+	<div class="marg-top">
+		<a class="button small secondary" href="<venda_codehttp>?ex=co_wizr-shopcart&bsref=<venda_bsref>&log=22"><venda_text id=desktop.button.view_shopping_cart></a>
+	</div>
+	</venda_block label=101>
+</div>
+</div>

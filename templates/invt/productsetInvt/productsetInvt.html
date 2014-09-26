@@ -1,0 +1,194 @@
+<venda_block label=45,invtpublish=1>
+<div class="prod-detail-content js-oneProduct js-prodMulti" id="oneProduct_<venda_invtuuid>">
+	<div class="js-oneProductContent">
+
+		<div class="row">
+			<div class="small-6 columns">
+				<venda_tpcomment><!-- IMAGE --></venda_tpcomment>
+				<div class="prod-image">
+					<venda_block label=4,med-rxsmall=notnull><a href="<venda_dispview invt=<venda_invtref>>"><venda_media rec=invt,type=movie-swf-pict,key=rxsmall,border=0></a></venda_block label=4>
+					<venda_block label=5,med-rxsmall=null><a href="<venda_dispview invt=<venda_invtref>>"><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_xsmall.gif" alt="<venda_text id=desktop.info.no_product_image>"></a></venda_block label=5>
+				</div>
+				<venda_tpcomment><!-- eo IMAGE --></venda_tpcomment>
+			</div>
+			<div class="small-18 columns">
+				<venda_tpcomment><!-- PRICE --></venda_tpcomment>
+					<p id="name" class="prod-name">
+						<a href="<venda_dispview invt=<venda_invtref>>"><venda_invtname></a>
+					</p>
+
+					<p id="sku" class="prod-sku">
+						<span><venda_text id=desktop.info.sku></span> <venda_invtref>
+					</p>
+
+					<venda_tpcomment><!-- PRICE - NON ATTR --></venda_tpcomment>
+					<venda_block label=16,chkatt=null>
+					<div class="prod-pricedetails">
+						<venda_inctemplate type=includes,name=priceFormat>
+						<venda_inctemplate type=includes,name=multibuy>
+					</div>
+					</venda_block label=16>
+					<venda_tpcomment><!-- eo PRICE - NON ATTR --></venda_tpcomment>
+
+					<venda_tpcomment><!-- PRICE - ATTR --></venda_tpcomment>
+					<venda_block label=17,chkatt=notnull>
+					<div class="js-attributesPrice js-attrFeedback">
+						<venda_inctemplate type=includes,name=priceFormat>
+						<venda_block label=showmultibuy,invtatrminsubsell=0.00,invtatrmaxsubsell=0.00><venda_inctemplate type=includes,name=multibuy></venda_block label=showmultibuy>
+					</div>
+					</venda_block label=17>
+					<venda_tpcomment><!-- eo PRICE - ATTR --></venda_tpcomment>
+				<venda_tpcomment><!-- eo PRICE --></venda_tpcomment>
+			</div>
+		</div>
+
+
+		<venda_tpcomment><!-- DETAILS --></venda_tpcomment>
+		<div class="prod-details">
+
+			<venda_tpcomment><!-- ATTRIBUTES --></venda_tpcomment>
+			<venda_block label=799,chkatt=notnull>
+			<div class="js-attrFeedback productselectedwrapper">
+				<span id="productselected"></span>
+			</div>
+			<venda_tpcomment><!-- ATTRIBUTES INPUTS --></venda_tpcomment>
+			<div id="attributeInputs">
+				<venda_block label=21,selatt1=notnull>
+				<div>
+					<label for="att1"><venda_att1>:</label>
+					<select name="att1" id="att1_<venda_invtuuid>"><option value=""><venda_text id=desktop.info.please_select> <venda_att1></option><venda_selatt1></select>
+				</div>
+				</venda_block label=21>
+				<venda_block label=22,selatt2=notnull>
+				<div>
+					<label for="att2"><venda_att2>:</label>
+					<select name="att2" id="att2_<venda_invtuuid>"><option value=""><venda_text id=desktop.info.please_select> <venda_att2></option><venda_selatt2></select>
+				</div>
+				</venda_block label=22>
+				<venda_block label=23,selatt3=notnull>
+				<div>
+					<label for="att3"><venda_att3>:</label>
+					<select name="att3" id="att3_<venda_invtuuid>"><option value=""><venda_text id=desktop.info.please_select> <venda_att3></option><venda_selatt3></select>
+				</div>
+				</venda_block label=23>
+				<venda_block label=24,selatt4=notnull>
+				<div>
+					<label for="att4"><venda_att4>:</label>
+					<select name="att4" id="att4_<venda_invtuuid>"><option value=""><venda_text id=desktop.info.please_select> <venda_att4></option><venda_selatt4></select>
+				</div>
+				</venda_block label=24>
+			</div>
+			<div style="clear: both;"></div>
+			<venda_tpcomment><!-- eo ATTRIBUTES INPUTS --></venda_tpcomment>
+			<venda_block label=25,pdxtatrtype=grid>
+				<div id="key">
+					<h3><venda_text id=desktop.info.key></h3>
+					<ul>
+						<li><venda_text id=desktop.info.in_stock></li>
+						<li><venda_text id=desktop.info.out_of_stock></li>
+						<li><venda_text id=desktop.info.low_stock></li>
+						<li><venda_text id=desktop.info.item_preorder></li>
+						<li><venda_text id=desktop.info.no_of_weeks></li>
+						<li><venda_text id=desktop.info.email_me_when_back_in_stock></li>
+					</ul>
+				</div>
+			</venda_block label=25>
+			<div class="js-attrFeedback js-stockFeedbackBox">
+				<span id="productstatus"><venda_text id=desktop.info.please_make_selection></span>
+				<span id="stockstatus"></span> <span id="atrononhandholder" style="display:none"><venda_text id=desktop.info.only><span id="atronhand"></span><venda_text id=desktop.info.left></span>
+			</div>
+			</venda_block label=799>
+			<venda_tpcomment><!-- eo ATTRIBUTES --></venda_tpcomment>
+
+
+			<venda_tpcomment><!-- IN STOCK --></venda_tpcomment>
+			<venda_block label=25,invtavail&gt;0>
+
+			<input type="hidden" name="itemlist" value="<venda_invtref>" id="itemlist_<venda_invtref>">
+
+			<venda_block label=700,chkatt=null>
+			<div>
+				<div class="qtybox"><label for="qty"><venda_text id=desktop.info.qty></label><input class="js-qty" name="qtylist" id="qtylist_<venda_invtref>" type="text" value="1" size="3" maxlength="3"></div>
+				<!-- if product doesn't have attributes -->
+				<venda_block label=34,invtpreorder!=1>
+				<label class="js-addToCheckBoxLabel"><venda_text id=desktop.button.addtobasket><input type="checkbox" class="js-addToCheckBox" id="<venda_invtref>" /></label>
+				<!-- <input type="submit" class="button js-addproduct" value="<venda_text id=desktop.button.addtobasket>" onClick="document.form.ex.value='co_disp-shopc';">
+				<input type="submit" class="button js-buynow" value="<venda_text id=desktop.button.buy_now>"> -->
+				</venda_block label=34>
+
+				<venda_block label=35,invtpreorder=1>
+				<!-- pre-order with add to basket functionality (stay on the same page) -->
+				<input type="submit" value="<venda_text id=desktop.button.preorder>" class="button js-preorder" onClick="document.form.ex.value='co_disp-shopc';">
+				<!-- use this instead if you want pre-order with buy now functionality (go to basket page)
+				<input type="submit" value="<venda_text id=desktop.button.preorder>" class="button js-preorder"> -->
+				</venda_block label=35>
+			</div>
+			</venda_block label=700>
+
+			<venda_block label=701,chkatt=notnull>
+			<div>
+			<div id="addproductbox">
+				<div id="qtybox"><label for="qty"><venda_text id=desktop.info.qty>: </label>
+					<input class="js-qty" name="qtylist" id="qtylist_<venda_invtref>" type="text" value="1" size="3" maxlength="3">
+				</div>
+				<venda_tpcomment><!-- Add to basket, PreOrder --></venda_tpcomment>
+				<label class="js-addToCheckBoxLabel"><venda_text id=desktop.button.addtobasket><input type="checkbox" class="js-addToCheckBox" id="<venda_invtref>" /></label>
+				<!-- <input type="submit" value="<venda_text id=desktop.button.addtobasket>" class="button js-addproduct">
+				<input type="submit" value="<venda_text id=desktop.button.buy_now>" class="button js-buynow"> -->
+			</div>
+			<venda_tpcomment><!-- EMWBIS --></venda_tpcomment>
+			<a id="emwbis_link" href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=desktop.button.email_when_in_stock>" class="button" style="display:none"><venda_text id=desktop.button.email_when_in_stock></a>
+			<venda_tpcomment><!-- use this instead if you want pre-order with buy now functionality (go to basket page)
+			<input type="submit" value="<venda_text id=desktop.button.preorder>" class="button js-preorder" onClick="return getProduct('<venda_invtuuid>').checkAttributes(this.form,'')" --> </venda_tpcomment>
+			</div>
+			</venda_block label=701>
+
+			</venda_block label=25>
+			<venda_tpcomment><!-- eo IN STOCK --></venda_tpcomment>
+
+
+			<venda_tpcomment><!-- NO STOCK --></venda_tpcomment>
+			<div>
+				<venda_block label=30,invtpreorder=notnull>
+					<!-- if future release date -->
+					<p><venda_text id=desktop.info.release_date></p>
+				</venda_block label=30>
+
+				<venda_block label=26,invtavail&lt;1>
+				<!-- if out of stock -->
+				<div>
+					<span><venda_text id=desktop.info.out_of_stock></span>
+					<venda_block label=167,etadyleft&gt;0><span><venda_text id=desktop.info.eta_date>></span></venda_block label=167>
+					<a class="button" href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" title="<venda_text id=desktop.button.email_when_in_stock>" id="emwbis_link"><venda_text id=desktop.button.email_when_in_stock></a>
+				</div>
+				</venda_block label=26>
+
+				<venda_block label=219,chkatt=notnull>
+					<venda_tpcomment><!-- Attribute product - EMWBIS link will be hidden by default --></venda_tpcomment>
+					<p style="display:none"><a href="<venda_dispview invt=<venda_invtref>>?htxt=<venda_htxt mode=make,attrref=<venda_invtref>>&temp=emailinstock" title="<venda_text id=desktop.button.email_when_in_stock>" id="emwbis_link"><venda_text id=desktop.button.email_when_in_stock></a></p>
+
+					<venda_inctemplate name=attributeData,type=invt>
+					<venda_mediagrid template=alternateviewGrid>
+				</venda_block label=219>
+			</div>
+			<venda_tpcomment><!-- eo NO STOCK --></venda_tpcomment>
+
+		</div>
+		<venda_tpcomment><!-- eo DETAILS --></venda_tpcomment>
+
+		<venda_tpcomment><!-- ATTRIBUTES SETTINGS --></venda_tpcomment>
+		<venda_block label=1000,chkatt=notnull>
+		<div id="invtref" style="display: none;"><venda_invtref></div>
+		<div id="attributeNames" style="display: none;">
+			<div id="att1"><venda_att1></div>
+			<div id="att2"><venda_att2></div>
+			<div id="att3"><venda_att3></div>
+			<div id="att4"><venda_att4></div>
+		</div>
+		<div id="invtrelease" style="display: none;"><venda_invtrelease></div>
+		</venda_block label=1000>
+		<venda_tpcomment><!-- eo ATTRIBUTES SETTINGS --></venda_tpcomment>
+
+	</div>
+</div>
+</venda_block label=45>

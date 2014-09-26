@@ -1,0 +1,24 @@
+<venda_tpcomment><!-- included just above the closing body tag in layout (main/) templates for pages where tracking is used --></venda_tpcomment>
+<venda_inctemplate name=googleAnalyticsSnippet,type=tracking>
+<venda_tpcomment><!-- vendaDebug - javascript for (core code) template debugging tool --></venda_tpcomment>
+<venda_inctemplate name=vendaDebug,type=includes>
+<!--<venda_inctemplate name=adroll,type=tracking>!-->
+<venda_inctemplate name=mythings,type=tracking>
+<!--<venda_inctemplate name=quantcast,type=tracking>!-->
+<venda_inctemplate name=ve,type=tracking>
+<venda_inctemplate name=googleremarketing,type=tracking>
+<venda_inctemplate name=salecycle,type=tracking>
+<venda_block label=551,workflow=null>
+<venda_block label=550,mode=value,<venda_tpxt mode=get,name=trackingstep>=>
+<div class="pixelTracking">
+	<img src="http://media.fastclick.net/w/tre?ad_id=31030;evt=23183;cat1=31751;cat2=31752;rand=<venda_time time=now,format=ddmmyyhhmmssmmm>" width="1" height="1" border="0">
+	<img src="http://media.fastclick.net/w/roitrack.cgi?aid=1000044990" width="1" height="1" border="0">
+</div>
+</venda_block label=550>
+</venda_block label=551>
+<venda_tpcomment><!-- google certificated stores badge code --></venda_tpcomment>
+<venda_inctemplate name=googleBadge,type=tracking>
+
+<venda_block label=isproduct,invtref=notnull>
+<venda_inctemplate name=polyvore,type=tracking>
+</venda_block label=isproduct>

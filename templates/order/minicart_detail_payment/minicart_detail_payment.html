@@ -1,0 +1,66 @@
+
+<table class="large-24 columns text-left checkout-minicart-totals" summary="<venda_text id=desktop.info.order_totals_summary>" title="<venda_text id=desktop.info.order_totals_title>">
+    <tr>
+        <th scope="row" class="text-left"><venda_text id=desktop.info.subtotal></th>
+        <td class="text-right"><venda_ohcursym><venda_ohsub></td>
+    </tr>
+    <tr>
+        <th scope="row" class="text-left"><venda_text id=desktop.info.delivery_cost></th>
+        <td class="text-right"><venda_ohcursym><venda_ohship></td>
+    </tr>
+    <venda_block label=64,showdiscount=1>
+    <!-- start discount -->
+    <tr>
+        <th scope="row" class="text-left"><venda_text id=desktop.info.discount></th>
+        <td class="text-right">-<venda_ohcursym><venda_ohdisc></td>
+    </tr>
+    <!-- end discount -->
+    </venda_block label=64>
+    <venda_block label=91,ohtax!=0.00,ohtax=notnull>
+    <tr>
+        <th scope="row" class="text-left"><venda_text id=desktop.info.estimated_tax></th>
+        <td class="text-right"><venda_ohcursym><venda_ohtax></td>
+    </tr>
+    </venda_block label=91>
+    <venda_block label=68,ohgwtot&gt;0>
+    <tr>
+        <th scope="row" class="text-left"><venda_text id=desktop.info.giftwrapping></th>
+        <td class="text-right"><venda_ohcursym><venda_ohgwtot></td>
+    </tr>
+    </venda_block label=68>
+    <venda_taxbreakdown ohrfnbr=<venda_ohrfnbr>,template=shipTaxBreakDown>
+    <venda_block label=66,enablefreeorder=1>
+    <venda_block label=661,ohbal=0.00>
+    <tr>
+        <th scope="row" class="text-left"><venda_text id=desktop.info.free_order></th>
+    </tr>
+    </venda_block label=661>
+    </venda_block label=66>
+    <tr class="ordertotal">
+        <th scope="row" class="text-left"><venda_text id=desktop.info.order_total><venda_block label=191,ohtaxinc!=0.00,ohtaxinc=notnull> <venda_text id=desktop.info.including_vat></venda_block label=191></th>
+        <td class="text-right"><strong><venda_ohcursym><venda_ohtot></strong></td>
+    </tr>
+
+    <venda_block label=65,showaccount=1,storecreditused&gt;0.00,creditused&gt;0.00,operator=or>
+    <venda_block label=82,enablestorecredit=1,creditused&gt;0.00,operator=or>
+    <venda_block label=180,storecredit=notnull,storecredit&gt;0.00>
+    <tr>
+        <th scope="row" class="text-left"><venda_text id=desktop.info.store_credit_available></th>
+        <td class="text-right"><venda_ohcursym><venda_storecredit></td>
+    </tr>
+    <tr>
+        <th scope="row" class="text-left"><venda_text id=desktop.info.store_credit_used></th>
+        <td class="text-right"><venda_ohcursym><venda_account></td>
+    </tr>
+    </venda_block label=180>
+    <tr>
+        <th scope="row" class="text-left"><venda_text id=desktop.info.store_credit_remaining></th>
+        <td class="text-right"><venda_ohcursym><venda_storecreditremain></td>
+    </tr>
+    <tr>
+        <th scope="row" class="text-left"><venda_text id=desktop.info.store_credit_balance></th>
+        <td class="text-right"><venda_ohcursym><venda_balance></td>
+    </tr>
+    </venda_block label=82>
+    </venda_block label=65>
+</table>

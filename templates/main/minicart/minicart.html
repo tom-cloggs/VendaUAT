@@ -1,0 +1,64 @@
+<div id="minicartDetail" class="minicart-detail">
+    <div id="minicartHeader" class="minicartHeader show-for-small">
+    	<div id="minicartTitle" class="minicartTitle small-20 columns nopad"><span><venda_text id=desktop.info.your_basket></span></div>
+    	<div id="minicartClose" class="right"><i class="icon-close icon-3x"></i></div>
+    </div>
+
+    <venda_block errors=notnull><h2 class="alert-box alert radius" data-alert=""><venda_errors></h2></venda_block>
+
+    <div class="minicart-inner">
+    	<div id="header">
+        	<div class="scroll buttonUp hide-for-small"><i class="icon-close_icon icon-small"></i></div>
+        </div>
+
+		<venda_block label=53,mode=value,<venda_shopcart mode=getqty>=0>
+            <div class="small-24 columns">
+                <span id="minicart_empty" class="minicart_empty"><venda_text id=desktop.info.shopping_cart_empty></span>
+            </div>
+        </venda_block label=53>
+
+        <venda_block label=52,mode=value,<venda_shopcart mode=getqty>!=0>
+        <div id="basketWrapper">
+            <div id="basketHolder" class="basketholder large-24 columns">
+                <venda_order shopcart=1,template=minicartDetail>
+            </div>
+        </div>
+        </venda_block label=52>
+
+        <!--start: bottom button-->
+        <div id="footer" class="row">
+            <venda_block label=34,mode=value,<venda_tpxt mode=get,name=instore>!=1>
+	            <div class="large-24 columns">
+	                <div class="scroll buttonDown hide-for-small"><i class="icon-expand_icon icon-small"></i></div>
+
+	                <venda_minicart template=minicartItemsTotal>
+
+	                <div class="minicart-buttons row"<venda_block label=52,mode=value,<venda_shopcart mode=getqty>=0>style="display:none;"</venda_block label=52>>
+	                    <div class="small-13 columns">
+	                        <a href="<venda_codehttp>?ex=co_wizr-shopcart&bsref=<venda_bsref>&log=22" class="button small"><venda_block label=25,med-basket=notnull><venda_media rec=element,type=pict,key=basket,border=0></venda_block label=25><venda_block label=26,med-basket=null><venda_text id=desktop.button.view_shopping_cart></venda_block label=26></a>
+	                    </div>
+	                    <div class="small-11 columns">
+	                        <venda_block label=100,ustype=R>
+	                            <venda_block label=210,mode=value,<venda_setting type=ebiz,name=skipsecondlogin>=1><a id="goToCheckoutmd" class="button success right small" href="<venda_codehttps>?ex=co_wizr-checkout&bsref=<venda_bsref>&step=ordersummary"><venda_text id=desktop.button.checkout></a></venda_block label=210>
+	                            <venda_block label=211,mode=value,<venda_setting type=ebiz,name=skipsecondlogin>!=1><a id="goToCheckoutmd" class="button success right small" href="<venda_codehttps>?ex=co_wizr-checkout&bsref=<venda_bsref>&step=login"><venda_text id=desktop.button.checkout></a></venda_block label=211>
+	                        </venda_block label=100>
+
+	                        <venda_block label=101,ustype!=R>
+	                            <a id="goToCheckoutmd" class="button success right small" href="<venda_codehttps>?ex=co_wizr-checkout&bsref=<venda_bsref>&step=login"><venda_text id=desktop.button.checkout></a>
+	                        </venda_block label=101>
+
+	                    </div>
+	                </div>
+	            </div>
+        	</venda_block label=34>
+        </div>
+        <!--end: bottom button-->
+
+        <venda_block label=201,mode=value,<venda_ebxtcurrencyConvert>=1>
+            <venda_tpcomment><!-- Only shows if the currency converter is enabled --></venda_tpcomment>
+            <div class="js-minicart">
+                <h2><span></span><venda_text id=desktop.info.currency_converter_info1> <venda_currencycode></h2>
+            </div>
+        </venda_block label=201>
+    </div>
+</div>

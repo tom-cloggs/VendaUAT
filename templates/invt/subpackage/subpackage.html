@@ -1,0 +1,56 @@
+<div>
+<div class="prod-detail-content js-oneProduct" id="oneProduct_<venda_invtuuid>">
+	<div class="js-oneProductContent">
+		<form action="<venda_codehttp>" method="get" name="addproductform" id="addproduct<venda_invtref>form">
+		<input type="hidden" name="bsref" value="<venda_bsref>">
+		<input type="hidden" name="log" value="22">
+		<input type="hidden" name="mode" value="add">
+		<input type="hidden" name="curpage" value="">
+		<input type="hidden" name="next" value="">
+		<input type="hidden" name="ex" value="co_wizr-shopcart">
+		<input type="hidden" name="buy" value="<venda_invtref>">
+		<input type="hidden" name="invt" value="<venda_invtref>">
+		<input type="hidden" name="ivref" value="<venda_invtref>">
+		<input type="hidden" name="layout">
+
+		<div>
+
+		<div>
+			<div class="prod-image">
+			<a href="<venda_dispview invt=<venda_invtref>>" title="<venda_text id=desktop.info.large_image_title>">
+			<venda_block label=10,med-small=notnull><venda_media rec=invt,type=movie-swf-pict,key=multi,dyn=yes,default=small>	</venda_block label=10>
+			<venda_block label=11,med-small=null><img src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/images/no_image_medium.gif" alt="<venda_text id=desktop.info.no_product_image>"></venda_block label=11></a>
+			</div>
+			<div class="prod-name"><p><a href="<venda_dispview invt=<venda_invtref>>"><venda_invtname></a></p></div>
+		</div>
+
+		<!-- display details of sub-skus -->
+		<venda_invtsku template=subpackagesku>
+		<div>
+			<venda_inctemplate type=includes,name=priceFormat>
+			<div>
+				<venda_block label=81,invtavail&gt;0>
+				<label for="qty"><venda_text id=desktop.form.qty></label><input name="qty" id="qty" class="js-qty" type="text" value="1" size="3" maxlength="3" >
+				<!-- if in stock -->
+				<input type="submit" id="addproduct" class="button js-addproduct" value="<venda_text id=desktop.button.addtobasket>" onClick="document.form<venda_invtref>.ex.value='co_disp-shopc';">
+				<input type="submit" class="button js-buynow" value="<venda_text id=desktop.button.buy_now>">
+				</venda_block label=81>
+
+				<venda_block label=30,invtpreorder=notnull>
+				<!-- if future release date -->
+				<p><venda_text id=desktop.info.not_yet_released></p>
+				<p><venda_text id=desktop.info.release_date></p>
+				</venda_block label=30>
+
+				<venda_block label=26,invtavail&lt;1>
+				<!-- if out of stock -->
+				<p><venda_text id=desktop.info.out_of_stock></p>
+				<p><a href="<venda_dispview invt=<venda_invtref>>&temp=emailinstock" class="button" title="<venda_text id=desktop.heading.email_when_in_stock>" id="emwbis_link"><venda_text id=desktop.heading.email_when_in_stock></a></p>
+				</venda_block label=26>
+			</div>
+		</div>
+		</div>
+		</form>
+	</div>
+</div>
+</div>

@@ -1,0 +1,110 @@
+<venda_block label=dts-lookup,mode=value,<venda_ebxtNGstoreloc>!=1>
+<venda_tpcomment><!-- Deliver to Store - Google, Venda and Ajax --></venda_tpcomment>
+
+<!-- jQuery templates -->
+<script type="text/javascript" src="/content/ebiz/<venda_bsref>/resources/js/external/jquery-tmpl-min.js"></script>
+
+<!-- Google API includes -->
+<script type="text/javascript" src="<venda_protocol>://www.google.com/jsapi"></script>
+<venda_block label=11,ebxtgapikey!=>
+	<!-- API KEY -->
+	<script type="text/javascript" src="<venda_protocol>://maps.googleapis.com/maps/api/js?key=<venda_ebxtgapikey>&libraries=geometry&sensor=true&language=en"></script>
+</venda_block label=11>
+<venda_block label=12,ebxtgapikey=>
+	<!-- NO API KEY -->
+	<script type="text/javascript" src="<venda_protocol>://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=true&language=en"></script>
+</venda_block label=12>
+
+<!-- Store locator script -->
+<script type="text/javascript" src="/content/ebiz/<venda_bsref>/resources/js/Venda/Storelocator/storelocator-lookup.js"></script>
+
+<!-- jQuery template -->
+<script id="store-tmpl" type="text/x-jquery-tmpl">
+<li>
+	<div id="${StoreID}" class="js-linkstore pad">
+		<a id="${StoreID}" href="${optionValue}">${StoreName} <span class="distance">${Dist} ${Unit}</span>
+
+					<address>
+					{{if AddressName}}
+						${AddressName}
+					{{/if}}
+					{{if Address}}
+						${Address}<br/>
+					{{/if}}
+					{{if Address2}}
+						${Address2}
+					{{/if}}
+					{{if City}}
+						${City}
+					{{/if}}
+					{{if PostCode}}
+						${PostCode}<br/>
+					{{/if}}
+						{{if Phone}}
+							${Phone}
+						{{/if}}
+					</address>
+				</a>
+			<div class="select-right"> <i class="icon-angle-right"></i></div>
+	</div>
+  </li>
+</script>
+
+</venda_block label=dts-lookup>
+
+<venda_block label=dts-dropdown,mode=value,<venda_ebxtNGstoreloc>=1>
+	<venda_tpcomment><!-- Deliver to Store - DropDown (Venda and Ajax) --></venda_tpcomment>
+
+		<!-- Store locator - Fallback script -->
+		<script type="text/javascript" src="/content/ebiz/<venda_bsref>/resources/js/Venda/Storelocator/storelocator-dropdown.js"></script>
+</venda_block label=dts-dropdown>
+
+<div id="tag-ebizurl" style="display:none;"><venda_ebizurl></div>
+<div id="tag-selectastore" style="display:none;"><venda_text id=desktop.info.select_a_store></div>
+<div id="tag-selectaregion" style="display:none;"><venda_text id=desktop.info.select_a_region></div>
+<div id="tag-selectthisstore" style="display:none;"><venda_text id=desktop.button.select_store></div>
+<div id="tag-storedetails" style="display:none;"><venda_text id=desktop.info.store_details></div>
+<div id="tag-tel" style="display:none;"><venda_text id=desktop.form.phone>: </div>
+<div id="tag-distance" style="display:none;"><venda_text id=desktop.info.distance>: </div>
+<div id="tag-back" style="display:none;"><venda_text id=desktop.button.back></div>
+
+<div id="storelocator">
+	<div id="storelookup">
+			<div id="nav">
+				<div id="address_holder">
+
+				<venda_block label=dts-lookup2,mode=value,<venda_ebxtNGstoreloc>!=1>
+					<div class="row collapse">
+					<form name="storelocatorform" id="storelocatorform" onsubmit="return false;">
+					  <div class="large-20 small-20 columns">
+					   <input id="address" name="address" placeholder="<venda_text id=desktop.form.search_location>" class="addressSearch" type="text" value="<venda_text id=desktop.form.search_location>" onfocus="if (this.value == '<venda_text id=desktop.form.search_location>') {this.value = '';}" onblur="if (this.value == '') {this.value = '<venda_text id=desktop.form.search_location>';}">
+					  </div>
+					  <div class="large-4 small-4 columns">
+						<input type="submit" name="pcsubmit" id="pcsubmit" value="Find" class="button small expand">
+					  </div>
+					  </form>
+					</div>
+
+					<div class="js-storeLocSelectHolder">
+						<p><venda_text id=desktop.info.or></p>
+
+				</venda_block label=dts-lookup2>
+
+				<venda_block label=dts-dropdown2,mode=value,<venda_ebxtNGstoreloc>=1>
+				<div class="js-storeLocSelectHolder">
+				</venda_block label=dts-dropdown2>
+
+					<div class="js-loading"><i class="icon-spinner icon-spin icon-2x"></i></div>
+					<select class="js-storeLocSelect"></select>
+
+				</div>
+			  	</div>
+
+				<div class="js-storelocatorresults storelocatorresults marg-bottom" style="display:none;"><div class="text-center marg-bottom"><i class="icon-angle-down icon-2x"></i></div>
+					<ul id="storelocatorresults"></ul>
+				</div>
+			</div>
+			<div id="map_canvas" style="width:400px; height:465px; display:none"></div>
+			<div class="interstores"></div>
+		</div>
+</div>

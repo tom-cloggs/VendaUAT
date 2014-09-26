@@ -1,0 +1,60 @@
+<div>
+    <venda_block label=34,ustype=R>
+    <div id="orderhistory">
+
+        <div class="main-header  thickmarg-bottom"><h1><venda_text id=desktop.heading.order_history></h1></div>
+        <venda_block label=1,errors=notnull><h2 class="alert-box alert radius" data-alert=""><venda_errors></h2></venda_block label=1>
+        <p><venda_text id=desktop.info.order_history_1></p>
+        <p><venda_text id=desktop.info.order_history_2> <a href="mailto:<venda_setting type=ebiz,name=email>"><venda_setting type=ebiz,name=email></a>&nbsp;</p>
+
+        <venda_detblock4>
+        <venda_order ref=<venda_ohrfnbr>,shopcart=0,template=orderHistoryOverview>
+        </venda_detblock4>
+
+        <div>
+            <h2><venda_text id=desktop.heading.recent_orders></h2>
+
+            <venda_block label=20,ohorders!=0>
+			<div class="table-overflow">
+                <table summary="<venda_text id=desktop.info.order_history_table_summary>" width="100%">
+                    <thead>
+                    <tr>
+                        <th scope="col">Order</th>
+                        <th scope="col"><venda_text id=desktop.info.items_in_this_order></th>
+                        <th scope="col">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                          <venda_detail4>
+                    </tbody>
+                </table>
+			</div>
+            </venda_block label=20>
+            <venda_tpcomment><!-- End: Recent Orders --></venda_tpcomment>
+
+            <venda_tpcomment><!-- Start: No Orders --></venda_tpcomment>
+            <venda_block label=21,ohorders=0>
+            <p><venda_text id=desktop.info.no_orders_placed></p>
+            </venda_block label=21>
+            <venda_tpcomment><!-- End: No Orders --></venda_tpcomment>
+
+            <div id="buttons">
+                <a href="<venda_codehttps>?ex=co_wizr-myaccount&bsref=<venda_bsref>" class="button secondary"><venda_text id=desktop.button.my_account></a>
+            </div>
+        </div>
+
+    </div>
+    </venda_block label=34>
+
+    <venda_block label=33,ustype!=R>
+      <script language="javascript" type="text/javascript">  <venda_tpcomment>/* forward to log in page*/</venda_tpcomment>  window.location.replace="<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref>";  </script>
+      <h1><venda_text id=desktop.heading.myaccount></h1>
+        <p><venda_text id=desktop.info.orderhistory_login_message> <a href="<venda_codehttps>?ex=co_wizr-register&bsref=<venda_bsref>"><venda_text id=desktop.button.log_in></a></p>
+    </venda_block label=33>
+</div>
+
+    <venda_tpxt mode=set,name=trackingstep,value=orderhistory>
+    <venda_inctemplate name=workflowSteps,type=tracking/shared>
+    <venda_tpcomment><!-- Used for html title --></venda_tpcomment>
+    <venda_tpxt mode=set,name=title,value=<venda_text id=desktop.heading.order_history>>
+

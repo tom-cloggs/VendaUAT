@@ -1,0 +1,423 @@
+.ie8 h1 {
+  font-size: 1.92857em;
+}
+
+/* The Grid ---------------------- */
+.ie8 .row { width: 978px; max-width: 100%; min-width: 764px; margin: 0 auto; }
+.ie8 .row .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
+.ie8 .row .row.collapse,
+.ie8 .row .row.collapse { padding: 0; }
+.ie8 .row.large-collapse .column,
+.ie8 .row.large-collapse .columns { padding: 0; }
+.ie8 .row .row.large-collapse { margin: 0; }
+
+.ie8 .column, .ie8 .columns { float: left; min-height: 1px; padding: 0 15px; }
+.ie8 .column.large-centered, .ie8 .columns.large-centered { float: none; margin: 0 auto; }
+
+.ie8 [class*="column"] + [class*="column"]:last-child { float: right; }
+.ie8 [class*="column"] + [class*="column"].end { float: left; }
+
+.ie8 .small-1,.ie8 .row .small-1 { width: 4.16667%; }
+.ie8 .small-2,.ie8 .row .small-2 { width: 8.33333%; }
+.ie8 .small-3,.ie8 .row .small-3 { width: 12.5%; }
+.ie8 .small-4,.ie8 .row .small-4 { width: 16.66667%; }
+.ie8 .small-5,.ie8 .row .small-5 { width: 20.83333%; }
+.ie8 .small-6,.ie8 .row .small-6 { width: 25%; }
+.ie8 .small-7,.ie8 .row .small-7 { width: 29.16667%; }
+.ie8 .small-8,.ie8 .row .small-8 { width: 33.33333%; }
+.ie8 .small-9,.ie8 .row .small-9 { width: 37.5%; }
+.ie8 .small-10,.ie8 .row .small-10 { width: 41.66667%; }
+.ie8 .small-11,.ie8 .row .small-11 { width: 45.83333%; }
+.ie8 .small-12,.ie8 .row .small-12 { width: 50%; }
+.ie8 .small-13,.ie8 .row .small-13 { width: 54.16667%; }
+.ie8 .small-14,.ie8 .row .small-14 { width: 58.33333%; }
+.ie8 .small-15,.ie8 .row .small-15 { width: 62.5%; }
+.ie8 .small-16,.ie8 .row .small-16 { width: 66.66667%; }
+.ie8 .small-17,.ie8 .row .small-17 { width: 70.83333%; }
+.ie8 .small-18,.ie8 .row .small-18 { width: 75%; }
+.ie8 .small-19,.ie8 .row .small-19 { width: 79.16667%; }
+.ie8 .small-20,.ie8 .row .small-20 { width: 83.33333%; }
+.ie8 .small-21,.ie8 .row .small-21 { width: 87.5%; }
+.ie8 .small-22,.ie8 .row .small-22 { width: 91.66667%; }
+.ie8 .small-23,.ie8 .row .small-23 { width: 95.83333%; }
+.ie8 .small-24,.ie8 .row .small-24 { width: 100%; }
+
+.ie8 .large-1,.ie8 .row .large-1 { width: 4.16667%; }
+.ie8 .large-2,.ie8 .row .large-2 { width: 8.33333%; }
+.ie8 .large-3,.ie8 .row .large-3 { width: 12.5%; }
+.ie8 .large-4,.ie8 .row .large-4 { width: 16.66667%; }
+.ie8 .large-5,.ie8 .row .large-5 { width: 20.83333%; }
+.ie8 .large-6,.ie8 .row .large-6 { width: 25%; }
+.ie8 .large-7,.ie8 .row .large-7 { width: 29.16667%; }
+.ie8 .large-8,.ie8 .row .large-8 { width: 33.33333%; }
+.ie8 .large-9,.ie8 .row .large-9 { width: 37.5%; }
+.ie8 .large-10,.ie8 .row .large-10 { width: 41.66667%; }
+.ie8 .large-11,.ie8 .row .large-11 { width: 45.83333%; }
+.ie8 .large-12,.ie8 .row .large-12 { width: 50%; }
+.ie8 .large-13,.ie8 .row .large-13 { width: 54.16667%; }
+.ie8 .large-14,.ie8 .row .large-14 { width: 58.33333%; }
+.ie8 .large-15,.ie8 .row .large-15 { width: 62.5%; }
+.ie8 .large-16,.ie8 .row .large-16 { width: 66.66667%; }
+.ie8 .large-17,.ie8 .row .large-17 { width: 70.83333%; }
+.ie8 .large-18,.ie8 .row .large-18 { width: 75%; }
+.ie8 .large-19,.ie8 .row .large-19 { width: 79.16667%; }
+.ie8 .large-20,.ie8 .row .large-20 { width: 83.33333%; }
+.ie8 .large-21,.ie8 .row .large-21 { width: 87.5%; }
+.ie8 .large-22,.ie8 .row .large-22 { width: 91.66667%; }
+.ie8 .large-23,.ie8 .row .large-23 { width: 95.83333%; }
+.ie8 .large-24,.ie8 .row .large-24 { width: 100%; }
+
+.ie8 .row .small-offset-1 { margin-left: 4.16667%; }
+.ie8 .row .small-offset-2 { margin-left: 8.33333%; }
+.ie8 .row .small-offset-3 { margin-left: 12.5%; }
+.ie8 .row .small-offset-4 { margin-left: 16.66667%; }
+.ie8 .row .small-offset-5 { margin-left: 20.83333%; }
+.ie8 .row .small-offset-6 { margin-left: 25%; }
+.ie8 .row .small-offset-7 { margin-left: 29.16667%; }
+.ie8 .row .small-offset-8 { margin-left: 33.33333%; }
+.ie8 .row .small-offset-9 { margin-left: 37.5%; }
+.ie8 .row .small-offset-10 { margin-left: 41.66667%; }
+.ie8 .row .small-offset-11 { margin-left: 45.83333; }
+.ie8 .row .small-offset-12 { margin-left: 50%; }
+.ie8 .row .small-offset-13 { margin-left: 54.16667%; }
+.ie8 .row .small-offset-14 { margin-left: 58.33333%; }
+.ie8 .row .small-offset-15 { margin-left: 62.5%; }
+.ie8 .row .small-offset-16 { margin-left: 66.66667%; }
+.ie8 .row .small-offset-17 { margin-left: 70.83333%; }
+.ie8 .row .small-offset-18 { margin-left: 75%; }
+.ie8 .row .small-offset-19 { margin-left: 79.16667%; }
+.ie8 .row .small-offset-20 { margin-left: 83.33333%; }
+.ie8 .row .small-offset-21 { margin-left: 87.5%; }
+.ie8 .row .small-offset-22 { margin-left: 91.66667%; }
+.ie8 .row .small-offset-23 { margin-left: 95.83333%; }
+
+.ie8 .row .large-offset-1 { margin-left: 4.16667%; }
+.ie8 .row .large-offset-2 { margin-left: 8.33333%; }
+.ie8 .row .large-offset-3 { margin-left: 12.5%; }
+.ie8 .row .large-offset-4 { margin-left: 16.66667%; }
+.ie8 .row .large-offset-5 { margin-left: 20.83333%; }
+.ie8 .row .large-offset-6 { margin-left: 25%; }
+.ie8 .row .large-offset-7 { margin-left: 29.16667%; }
+.ie8 .row .large-offset-8 { margin-left: 33.33333%; }
+.ie8 .row .large-offset-9 { margin-left: 37.5%; }
+.ie8 .row .large-offset-10 { margin-left: 41.66667%; }
+.ie8 .row .large-offset-11 { margin-left: 45.83333; }
+.ie8 .row .large-offset-12 { margin-left: 50%; }
+.ie8 .row .large-offset-13 { margin-left: 54.16667%; }
+.ie8 .row .large-offset-14 { margin-left: 58.33333%; }
+.ie8 .row .large-offset-15 { margin-left: 62.5%; }
+.ie8 .row .large-offset-16 { margin-left: 66.66667%; }
+.ie8 .row .large-offset-17 { margin-left: 70.83333%; }
+.ie8 .row .large-offset-18 { margin-left: 75%; }
+.ie8 .row .large-offset-19 { margin-left: 79.16667%; }
+.ie8 .row .large-offset-20 { margin-left: 83.33333%; }
+.ie8 .row .large-offset-21 { margin-left: 87.5%; }
+.ie8 .row .large-offset-22 { margin-left: 91.66667%; }
+.ie8 .row .large-offset-23 { margin-left: 95.83333%; }
+
+.ie8 .pull-1 { right: 4.16667%; }
+.ie8 .pull-2 { right: 8.33333%; }
+.ie8 .pull-3 { right: 12.5%; }
+.ie8 .pull-4 { right: 16.66667%; }
+.ie8 .pull-5 { right: 20.83333%; }
+.ie8 .pull-6 { right: 25%; }
+.ie8 .pull-7 { right: 29.16667%; }
+.ie8 .pull-8 { right: 33.33333%; }
+.ie8 .pull-9 { right: 37.5%; }
+.ie8 .pull-10 { right: 41.66667%; }
+.ie8 .pull-11 { right: 45.83333%; }
+.ie8 .pull-12 { right: 50%; }
+.ie8 .pull-13 { right: 54.16667%; }
+.ie8 .pull-14 { right: 58.33333%; }
+.ie8 .pull-15 { right: 62.5%; }
+.ie8 .pull-16 { right: 66.66667%; }
+.ie8 .pull-17 { right: 70.83333%; }
+.ie8 .pull-18 { right: 75%; }
+.ie8 .pull-19 { right: 79.16667%; }
+.ie8 .pull-20 { right: 83.33333%; }
+.ie8 .pull-21 { right: 87.5%; }
+.ie8 .pull-22 { right: 91.66667%; }
+.ie8 .pull-23 { right: 95.83333%; }
+
+.ie8 .push-1 { left: 4.16667%; }
+.ie8 .push-2 { left: 8.33333%; }
+.ie8 .push-3 { left: 12.5%; }
+.ie8 .push-4 { left: 16.66667%; }
+.ie8 .push-5 { left: 20.83333%; }
+.ie8 .push-6 { left: 25%; }
+.ie8 .push-7 { left: 29.16667%; }
+.ie8 .push-8 { left: 33.33333%; }
+.ie8 .push-9 { left: 37.5%; }
+.ie8 .push-10 { left: 41.66667%; }
+.ie8 .push-11 { left: 45.83333%; }
+.ie8 .push-12 { left: 50%; }
+.ie8 .push-13 { left: 54.16667%; }
+.ie8 .push-14 { left: 58.33333%; }
+.ie8 .push-15 { left: 62.5%; }
+.ie8 .push-16 { left: 66.66667%; }
+.ie8 .push-17 { left: 70.83333%; }
+.ie8 .push-18 { left: 75%; }
+.ie8 .push-19 { left: 79.16667%; }
+.ie8 .push-20 { left: 83.33333%; }
+.ie8 .push-21 { left: 87.5%; }
+.ie8 .push-22 { left: 91.66667%; }
+.ie8 .push-23 { left: 95.83333%; }
+
+/* Small Block Grids */
+/*.ie8 .small-block-grid-2 li{float:left;width:50%;padding:0 10px 10px;}
+.ie8 .small-block-grid-3 li{float:left;width:33.3333%;padding:0 10px 10px;}
+.ie8 .small-block-grid-4 li{float:left;width:25%;padding:0 10px 10px;}
+.ie8 .small-block-grid-5 li{float:left;width:20%;padding:0 10px 10px;}
+.ie8 .small-block-grid-6 li{float:left;width:16.6667%;padding:0 10px 10px;}
+.ie8 .small-block-grid-7 li{float:left;width:14.2857142%;padding:0 10px 10px;}
+.ie8 .small-block-grid-8 li{float:left;width:12.5%;padding:0 10px 10px;}
+.ie8 .small-block-grid-9 li{float:left;width:11.111111%;padding:0 10px 10px;}
+.ie8 .small-block-grid-10 li{float:left;width:10%;padding:0 10px 10px;}
+.ie8 .small-block-grid-11 li{float:left;width:9.0909%;padding:0 10px 10px;}
+.ie8 .small-block-grid-12 li{float:left;width:8.333333%;padding:0 10px 10px;}
+.ie8 .small-block-grid-2,.ie8 .small-block-grid-3,.ie8 .small-block-grid-4,.ie8 .small-block-grid-5,.ie8 .small-block-grid-6,.ie8 .small-block-grid-7,.ie8 .small-block-grid-8,.ie8 .small-block-grid-9,.ie8 .small-block-grid-10,.ie8 .small-block-grid-11,.ie8 .small-block-grid-12{list-style:none;}
+.ie8 .small-block-grid-2 li:first-child+li,.ie8 .small-block-grid-3 li:first-child+li+li,.ie8 .small-block-grid-4 li:first-child+li+li+li,.ie8 .small-block-grid-5 li:first-child+li+li+li+li,.ie8 .small-block-grid-6 li:first-child+li+li+li+li+li,.ie8 .small-block-grid-7 li:first-child+li+li+li+li+li+li,.ie8 .small-block-grid-8 li:first-child+li+li+li+li+li+li+li,.ie8 .small-block-grid-9 li:first-child+li+li+li+li+li+li+li+li,.ie8 .small-block-grid-10 li:first-child+li+li+li+li+li+li+li+li+li,.ie8 .small-block-grid-11 li:first-child+li+li+li+li+li+li+li+li+li+li,.ie8 .small-block-grid-12 li:first-child+li+li+li+li+li+li+li+li+li+li+li{float:right;}
+.ie8 .small-block-grid-2 li:first-child+li+li,.ie8 .small-block-grid-3 li:first-child+li+li+li,.ie8 .small-block-grid-4 li:first-child+li+li+li+li,.ie8 .small-block-grid-5 li:first-child+li+li+li+li+li,.ie8 .small-block-grid-6 li:first-child+li+li+li+li+li+li,.ie8 .small-block-grid-7 li:first-child+li+li+li+li+li+li+li,.ie8 .small-block-grid-8 li:first-child+li+li+li+li+li+li+li+li,.ie8 .small-block-grid-9 li:first-child+li+li+li+li+li+li+li+li+li,.ie8 .small-block-grid-10 li:first-child+li+li+li+li+li+li+li+li+li+li,.ie8 .small-block-grid-11 li:first-child+li+li+li+li+li+li+li+li+li+li+li,.ie8 .small-block-grid-12 li:first-child+li+li+li+li+li+li+li+li+li+li+li+li{clear:both;}*/
+
+/* Large Block Grids */
+.ie8 .large-block-grid-2 li{float:left;width:50%;padding:0 10px 10px;}
+.ie8 .large-block-grid-3 li{float:left;width:33.3333%;padding:0 10px 10px;}
+.ie8 .large-block-grid-4 li{float:left;width:25%;padding:0 10px 10px;}
+.ie8 .large-block-grid-5 li{float:left;width:20%;padding:0 10px 10px;}
+.ie8 .large-block-grid-6 li{float:left;width:16.6667%;padding:0 10px 10px;}
+.ie8 .large-block-grid-7 li{float:left;width:14.2857142%;padding:0 10px 10px;}
+.ie8 .large-block-grid-8 li{float:left;width:12.5%;padding:0 10px 10px;}
+.ie8 .large-block-grid-9 li{float:left;width:11.111111%;padding:0 10px 10px;}
+.ie8 .large-block-grid-10 li{float:left;width:10%;padding:0 10px 10px;}
+.ie8 .large-block-grid-11 li{float:left;width:9.0909%;padding:0 10px 10px;}
+.ie8 .large-block-grid-12 li{float:left;width:8.333333%;padding:0 10px 10px;}
+.ie8 .large-block-grid-2,.ie8 .large-block-grid-3,.ie8 .large-block-grid-4,.ie8 .large-block-grid-5,.ie8 .large-block-grid-6,.ie8 .large-block-grid-7,.ie8 .large-block-grid-8,.ie8 .large-block-grid-9,.ie8 .large-block-grid-10,.ie8 .large-block-grid-11,.ie8 .large-block-grid-12{list-style:none;}
+.ie8 .large-block-grid-2 li:first-child+li,.ie8 .large-block-grid-3 li:first-child+li+li,.ie8 .large-block-grid-4 li:first-child+li+li+li,.ie8 .large-block-grid-5 li:first-child+li+li+li+li,.ie8 .large-block-grid-6 li:first-child+li+li+li+li+li,.ie8 .large-block-grid-7 li:first-child+li+li+li+li+li+li,.ie8 .large-block-grid-8 li:first-child+li+li+li+li+li+li+li,.ie8 .large-block-grid-9 li:first-child+li+li+li+li+li+li+li+li,.ie8 .large-block-grid-10 li:first-child+li+li+li+li+li+li+li+li+li,.ie8 .large-block-grid-11 li:first-child+li+li+li+li+li+li+li+li+li+li,.ie8 .large-block-grid-12 li:first-child+li+li+li+li+li+li+li+li+li+li+li{float:right;}
+.ie8 .large-block-grid-2 li:first-child+li+li,.ie8 .large-block-grid-3 li:first-child+li+li+li,.ie8 .large-block-grid-4 li:first-child+li+li+li+li,.ie8 .large-block-grid-5 li:first-child+li+li+li+li+li,.ie8 .large-block-grid-6 li:first-child+li+li+li+li+li+li,.ie8 .large-block-grid-7 li:first-child+li+li+li+li+li+li+li,.ie8 .large-block-grid-8 li:first-child+li+li+li+li+li+li+li+li,.ie8 .large-block-grid-9 li:first-child+li+li+li+li+li+li+li+li+li,.ie8 .large-block-grid-10 li:first-child+li+li+li+li+li+li+li+li+li+li,.ie8 .large-block-grid-11 li:first-child+li+li+li+li+li+li+li+li+li+li+li,.ie8 .large-block-grid-12 li:first-child+li+li+li+li+li+li+li+li+li+li+li+li{clear:both;}
+
+/* Nicolas Gallagher's micro clearfix */
+.ie8 .row { *zoom: 1; }
+.ie8 .row:before, .ie8 .row:after { content: " "; display: table; }
+.ie8 .row:after { clear: both; }
+
+/* Show/Hide Classes */
+.ie8 .show-for-large-up,
+.ie8 .show-for-tablet-portrait,
+.ie8 .hide-for-tablet-portrait-up,
+.ie8 .hide-for-desktop-up,
+.ie8 .hide-for-desktop,
+.ie8 .hide-for-tablet-portrait,
+.ie8 .show-for-small,
+.ie8 .show-for-large,
+.ie8 .show-for-large-up,
+.ie8 .show-for-xlarge,
+.ie8 .hide-for-medium-down,
+.ie8 .hide-for-medium,
+.ie8 .hide-for-medium-up,
+.ie8 .hide-for-large-down,
+.ie8 .hide-for-large,
+.ie8 .hide-for-large-up,
+.ie8 .hide-for-xlarge,
+.ie8 .hide-for-landscape,
+.ie8 .hide-for-portrait,
+.ie8 .show-for-touch
+{display: none !important;}
+
+.ie8 .hide-for-small
+{display: inherit !important;}
+
+/* General Tidying Up and Bug Fixes */
+.ie8 .minicart,.ie8 .js-custom .js-selectedArrow,.ie8 .js-custom .js-selectedArrow-shadow {border:none;}
+.ie8 .attribute-inputs .js-selected {
+    border: 2px solid #0092d2;
+}
+.ie8 .attribute-inputs .js-selectedArrow-shadow {
+    display: none;
+}
+.ie8 .reveal-modal-bg {
+    background:transparent;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
+    zoom: 1;
+}
+.ie8 .minicart-detail .row { width: auto; max-width: none; min-width: 0; margin: 0 -15px; }
+
+/* undo bizarre behaviour of collapse class on footer boxes */
+.ie8 .footer-boxes-one .collapse.row .columns { padding-right:1.07143em; }
+.ie8 .footer-boxes-one .collapse.row .columns:first-child { padding-left:1.07143em; padding-right:0; }
+.ie8 .footer-boxes-two .collapse.row .columns { padding-right:1.07143em; padding-left:1.07143em; }
+
+/* bug fixes for slider where IE8 doesn't show slides on initial load when using picturefill */
+
+.ie8 .orbit-category [data-picture] { height:170px; }
+.ie8 .js-pagnPerpage .row.collapse {margin:1px; }
+.ie8 .js-pagnPerpage .row.collapse label{padding-top:5px; }
+.ie8 .search-results .search-body {
+  float: right;
+}
+.ie8 .search-body {
+  padding: 20px 20px 20px 28px;
+}
+.ie8 .attribute-inputs ul li {
+	border: 1px solid #ccc;
+}
+.ie8 .attribute-inputs .js-selected {
+	border: 1px solid #0092d2;
+}
+
+.ie8 .mm_ul .js-mm-sub li {
+  float: none;
+  width: 100%;
+}
+
+.ie8 .js-mm-sub .large-block-grid-4 li {
+  float: left;
+  width: 25%;
+  padding: 0 10px 10px;
+}
+
+.ie8 .checkout-step-indicators {
+	overflow: hidden;
+}
+
+.ie8 .user-login {
+    padding-top: 8px;
+}
+.ie8 .header-row-two {
+  top:10px;
+}
+
+.ie8 .box .box-header {
+    filter: none;
+}
+.ie8 .footer-boxes {
+  padding: 10px;
+}
+.ie8 .footer-boxes-two .first {
+  float: left;
+}
+.ie8 .social {
+  display: inline;
+  margin-left: 0;
+}
+.ie8 .social li a {
+  color: #fff;
+}
+ .ie8 .news-col-1 {
+    float: left;
+    width: 26%;
+  }
+  .ie8 .news-col-1 h3 {
+    margin-bottom: 0;
+  }
+  .ie8 .news-col-2 {
+    float: right;
+    width: 73%;
+    padding-left: 1.14286em;
+  }
+  .ie8 .news-col-2 input{
+    margin-bottom: 0;
+  }
+.ie8 .checkout-step-indicators li {
+  float:left;
+  width: 20%
+}
+.ie8 .checkout-header .help a {
+  background-color: #fff;
+  color: #333;
+}
+.ie8 .footer-col-two {
+  float: right;
+}
+
+.ie8 .homebrandlogo ul li {
+  padding: 5px 0;
+}
+.ie8 .homebrandlogo ul li.first {
+  border-left: 1px solid #DDDDDD;
+}
+.ie8 .homebrandlogo ul li span {
+  padding-top: 76%;
+   background-size: 240% auto;
+}
+
+.ie8 .homebrandlogo .ugg_logo {
+  background-position: 7% 1%;
+}
+
+.ie8 .homebrandlogo .fitflop_logo {
+  background-position: 90% 2%;
+}
+
+.ie8 .homebrandlogo .drm_logo {
+  background-position: 10% 19%;
+}
+
+.ie8 .homebrandlogo .converse_logo {
+  background-position: 98% 20%;
+}
+
+.ie8 .homebrandlogo .rocketdog_logo {
+  background-position: 9% 35%;
+}
+
+.ie8 .homebrandlogo .hunter_logo {
+  background-position: 98% 37%;
+}
+
+.ie8 .homebrandlogo .ted_logo {
+  background-position: 10% 56%;
+}
+
+.ie8 .homebrandlogo .skechers_logo {
+  background-position: 99% 58%;
+}
+
+.ie8 .homebrandlogo .julian_logo {
+  background-position: 10% 75%;
+  background-size: 240% auto;
+}
+
+.ie8 .homebrandlogo .mel_logo {
+  background-position: 94% 78%;
+}
+
+.ie8 .homebrandlogo .van_logo {
+  background-position: 15% 96%;
+}
+
+.ie8 .homebrandlogo .crocs_logo {
+  background-position: 92% 100%;
+  background-size: 240% auto;
+}
+.ie8 .slider li {
+  width: 190px;
+}
+.ie8 .slider .prod .row {
+  margin: 0;
+}
+.ie8 .footer-row-two .columns:first-child+ .columns {
+  float: right;
+}
+.ie8 .prod-detail-content .brandlogo {
+  top: 1%;
+}
+.ie8 .prod-detail-content .brandlogo {
+  top: 1%;
+}
+.ie8 .productdetail-social .large-block-grid-5 li {
+  width: 19%;
+  text-align: center;
+}
+.ie8 .productdetail-social .large-block-grid-5 li.tellafriend {
+  width: 21%;
+}
+.ie8 .productdetail-social .social-buttons li {
+  padding: 10px 0 5px 0;
+}
+.ie8 .newsletter h3 {
+  font-size: 1.2em;
+}
+.ie8 .js-viewGrid[class*="block-grid-"] > li.prod {
+  /* overrides the default */
+  min-height: 329px;
+}

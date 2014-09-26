@@ -1,0 +1,103 @@
+<venda_block label=certifiedModule,ohstatus!=4>
+<script src="<venda_entmediaadd>/ebiz/<venda_bsref>/resources/js/external/moment.js"></script>
+<script type="text/javascript">
+    $( document ).ready(function() {
+    var orderID = Venda.Widget.Tracking.orderJSON.ref;
+    var orditemsArray = Venda.Widget.Tracking.orditemsArray;
+
+      // Get the full date
+      var now = moment().format("YYYY-MM-DD");
+
+      // Get the day
+      var orderDay = moment().format("dddd");
+     
+      // Get the hour
+      var currentHour = moment().format("HH");
+
+      if (currentHour > 19 ) {
+        aftercutoff();
+      } else {
+        beforecutoff();
+      }
+
+      function aftercutoff() {
+        if (orderDay == 'Sunday') {
+          var moment = ddispatchDate().add('days', 1).format("YYYY-MM-DD");
+          var delDate = moment().add('days', 2).format("YYYY-MM-DD");
+        } else if (orderDay == 'Saturday') {
+          var dispatchDate = moment().add('days', 2).format("YYYY-MM-DD");
+          var delDate = moment().add('days', 3).format("YYYY-MM-DD");
+        } else if (orderDay == 'Friday') {
+          var dispatchDate = moment().add('days', 3).format("YYYY-MM-DD");
+          var delDate = moment().add('days', 4).format("YYYY-MM-DD");
+        } else {
+          var dispatchDate = moment().add('days', 1).format("YYYY-MM-DD");
+          var delDate = moment().add('days', 2).format("YYYY-MM-DD");
+        }
+
+        var shipdatespan = $('<span />').attr('id', 'gts-o-est-ship-date').html(dispatchDate);
+        var deldatespan = $('<span />').attr('id', 'gts-o-est-delivery-date').html(delDate);
+
+        $( "#gts-order" ).append(shipdatespan);
+        $( "#gts-order" ).append(deldatespan);
+
+      }
+
+      function beforecutoff() {
+        if (orderDay == 'Sunday') {
+          var dispatchDate = moment().add('days', 1).format("YYYY-MM-DD");
+          var delDate = moment().add('days', 2).format("YYYY-MM-DD");
+        } else if (orderDay == 'Saturday') {
+          var dispatchDate = moment().add('days', 2).format("YYYY-MM-DD");
+          var delDate = moment().add('days', 3).format("YYYY-MM-DD");
+        } else {
+          var dispatchDate = moment().add('days', 0).format("YYYY-MM-DD");
+          var delDate = moment().add('days', 1).format("YYYY-MM-DD");
+        }
+
+        var shipdatespan = $('<span />').attr('id', 'gts-o-est-ship-date').html(dispatchDate);
+        var deldatespan = $('<span />').attr('id', 'gts-o-est-delivery-date').html(delDate);
+
+        $( "#gts-order" ).append(shipdatespan);
+        $( "#gts-order" ).append(deldatespan);
+
+      }
+
+     $.each(orditemsArray, function(i, val){
+      if (typeof(val) != "undefined") {
+        var prodID    = val.sku;
+        var prodName = val.name;
+        var prodPrice   = val.price;
+        var prodQty   = val.qty;
+
+        var shipDate;
+        var deliveryDate;
+ 
+        var output = '<span class="gts-item"><span class="gts-i-name">' + prodName + '</span><span class="gts-i-price">' + prodPrice + '</span><span class="gts-i-quantity">' + prodQty + '</span>' + '<span class="gts-i-prodsearch-id">' + prodID + '</span>' + '<span class="gts-i-prodsearch-store-id">83224002</span>' + '<span class="gts-i-prodsearch-country">GB</span><span class="gts-i-prodsearch-language">en</span>';
+
+        $( "#gts-order" ).append(output);
+
+        }
+      });
+    }); 
+</script>
+
+<!-- START Google Certified Shops Order -->
+<div id="gts-order" style="display: none;" translate="no">
+  <!-- start order and merchant information -->
+  <span id="gts-o-id"><venda_ohordnum></span>
+  <span id="gts-o-domain">www.cloggs.co.uk</span>
+  <span id="gts-o-email"><venda_ohemail></span>
+  <span id="gts-o-country">GB</span>
+  <span id="gts-o-currency"><venda_ohcur></span>
+  <span id="gts-o-total"><venda_ohtot></span>
+  <span id="gts-o-discounts"><venda_ohdisc></span>
+  <span id="gts-o-shipping-total"><venda_ohship></span>
+  <span id="gts-o-tax-total"><venda_ohtaxinc></span>
+  <span id="gts-o-has-preorder">N</span>
+  <span id="gts-o-has-digital">N</span>
+  <!-- end order and merchant information -->
+</div>
+<!-- END Google Certified Shops Order -->
+
+</venda_block label=certifiedModule>
