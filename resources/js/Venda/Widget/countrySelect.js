@@ -35,6 +35,7 @@ Venda.CountrySelect.Init = function() {
             topCountries = [
             'United Kingdom',
             'Guernsey',
+            'Jersey',
             'United States',
             'Denmark',
             'Ireland',
@@ -58,6 +59,7 @@ Venda.CountrySelect.Init = function() {
             topCountries = [
             'United Kingdom',
             'Guernsey',
+            'Jersey',
             'United States',
             'Denmark',
             'Ireland',
