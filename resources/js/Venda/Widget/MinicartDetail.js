@@ -149,6 +149,7 @@
     duration2: 3000,
     duration3: 5000,
     duration4: 500,
+    showMinicartDetail: 'hover',
     showAfterAddProd: false,
     showNotifications: true,
     appendNotify: false,
@@ -1246,6 +1247,11 @@
       } else {
         Venda.mcd.disableCheckbox(this);
       }
+    });
+
+    $('#basketSection').hover(function () {
+      console.log("Minicart hovered");
+
     });
 
   });
