@@ -1532,7 +1532,7 @@ p aside {
     font-style: italic;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: futura-pt, Arial;
+font-family: Verdana, Geneva, sans-serif;
     font-weight: 700;
     font-style: normal;
     color: #454545;
@@ -2046,7 +2046,7 @@ span.postfix.radius {
 }
 input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], textarea {
     background-color: #fff;
-    font-family: futura-pt, Arial;
+font-family: Verdana, Geneva, sans-serif;
     border: 1px solid #ccc;
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
@@ -2802,7 +2802,7 @@ html {
     text-indent: 3px;
 }
 body {
-    font-family: futura-pt, Arial;
+font-family: Verdana, Geneva, sans-serif;
     font-style: normal;
     font-weight: 400;
     position: static;
@@ -3096,7 +3096,7 @@ ul.inline-list>.welcome span {
 }
 .minicart-header-text {
     cursor: pointer;
-    font-family: futura-pt, Arial;
+font-family: Verdana, Geneva, sans-serif;
     font-size: 17px;
     font-colour: #000;
     letter-spacing: normal;
@@ -3357,7 +3357,7 @@ ul.inline-list>.welcome span {
     font-weight: 700;
 }
 .mm_ul {
-    font-family: futura-pt, Arial;
+font-family: Verdana, Geneva, sans-serif;
     float: left;
     width: 100%;
     margin: 0;
@@ -3729,7 +3729,7 @@ span.js-select .icon-angle-down {
     height: 130px;
 }
 .prod-name {
-    font-family: futura-pt, Arial;
+font-family: Verdana, Geneva, sans-serif;
     min-height: 40px;
     letter-spacing: normal;
 }
@@ -3752,7 +3752,7 @@ span.js-select .icon-angle-down {
 }
 .prod-pricefield {
     color: #00976f;
-    font-family: futura-pt, Arial;
+font-family: Verdana, Geneva, sans-serif;
     font-size: 14px;
     letter-spacing: normal;
 }
@@ -4369,7 +4369,7 @@ input.search-collate-filter {
     background-color: #000;
     color: #FFF;
     display: block;
-    font-family: futura-pt, Arial;
+font-family: Verdana, Geneva, sans-serif;
     font-size: 11px;
     font-weight: 700;
     padding: 10px;
@@ -6014,8 +6014,12 @@ a.button, input.button {
     margin-top: .58824em;
 }
 
-.prod-details .deliveryusp p {
+.deliveryusp p {
     color: #009670;
+}
+
+.prod-pricefield .prod-pricenow {
+    font-size: 1.8em;
 }
 
 .productdetail .prod-name {
@@ -6630,7 +6634,7 @@ footer.row {
 }
 .prod-name {
     min-height: 40px;
-    font-family: futura-pt, Arial;
+font-family: Verdana, Geneva, sans-serif;
     letter-spacing: normal;
 }
 .js-viewGrid.small-block-grid-3>li {
